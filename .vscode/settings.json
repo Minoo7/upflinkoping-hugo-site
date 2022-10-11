@@ -1,0 +1,7 @@
+{
+    "search.exclude": {
+        "**/exampleSite": true,
+        "exampleSite": true,
+        "public": true
+    }
+}
