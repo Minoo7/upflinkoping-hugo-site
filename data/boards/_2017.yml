@@ -1,0 +1,79 @@
+enable: true
+year: 2017
+members:
+    - image: images/team/team-member-one.jpg
+      name: Anne Richter
+      designation: president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-two.jpg
+      name: Mathias Göransson
+      designation: vice president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-three.jpg
+      name: Marie Francisco
+      designation: secretary
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-four.jpg
+      name: Tobias Lathinen
+      designation: treasurer
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+    
+    - image: images/team/team-member-five.jpg
+      name: Magnus Hellmann
+      designation: UFS Representative
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-five.jpg
+      name: Anna-Katharina Fürgut
+      designation: head of activity
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Isak Nordenberg
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Hulda Kecklund
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Ingrid Wendin
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+    
+    - image: images/team/team-member-six.jpg
+      name: Adam Svensson
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Nathan Brown
+      designation: head of marketing and communications
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin

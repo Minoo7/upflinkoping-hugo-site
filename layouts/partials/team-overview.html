@@ -1,0 +1,23 @@
+{{ with .Site.Data.team_overview }} {{ if .enable }}
+<section class="site-team-overview">
+  <div class="container">
+    <div class="section-title">
+        <h2 class="text-white">{{ .title }}</h2>
+    </div>
+    <div class="site-team-overview-item">
+        {{ $image := (resources.Get .board).Resize "1920x" }}
+        <img src="{{ $image.RelPermalink | absURL }}" alt="group photo" />
+      <div class="site-team-overview-item-button">
+        <a href="{{ .primary_button_url | absURL }}" class="btn btn-secondary">
+          <span class="btn-area">
+            <span data-text="{{ .subtitle }}">
+              {{ .subtitle }}
+              
+            </span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }} {{ end }}

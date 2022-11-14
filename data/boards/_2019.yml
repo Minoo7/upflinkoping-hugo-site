@@ -1,0 +1,51 @@
+enable: true
+year: 2019
+members:
+    - image: images/team/team-member-one.jpg
+      name: marcello guerra
+      designation: president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-two.jpg
+      name: sebastian sundvik
+      designation: vice president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-three.jpg
+      name: kylie love
+      designation: secretary
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-four.jpg
+      name: ramez ahadi
+      designation: treasurer
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-five.jpg
+      name: ahmad hanash
+      designation: head of activity
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: nazir elpustaty
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: sarem al alaf
+      designation: head of public relations
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin

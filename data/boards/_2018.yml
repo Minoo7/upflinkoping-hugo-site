@@ -1,0 +1,65 @@
+enable: true
+year: 2018
+members:
+    - image: images/team/team-member-one.jpg
+      name: mona el yadini
+      designation: president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-two.jpg
+      name: Mathias Göransson
+      designation: vice president
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-three.jpg
+      name: Atifa Qazi
+      designation: secretary
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-four.jpg
+      name: Sandra hosseinbor
+      designation: treasurer
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+    
+    - image: images/team/team-member-five.jpg
+      name: Tobias Lathinen
+      designation: UFS Representative
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+  
+    - image: images/team/team-member-five.jpg
+      name: Annika Sophie Müller
+      designation: head of activity
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Tobias Junerfält
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Harald Otter
+      designation: head of program
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin
+
+    - image: images/team/team-member-six.jpg
+      name: Tuuli Vanhanen
+      designation: head of marketing and communications
+      socials:
+      - link: https://www.linkedin.com/
+        icon: linkedin

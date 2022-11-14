@@ -1,0 +1,172 @@
+baseURL: "http://example.org/"
+languageCode: en-us
+title: Roxo | Creative Design Agency
+summarylength: 25
+
+# Site Menus
+menu:
+  # Navbar Menus
+
+  social:
+    - name: Instagram
+      url: ""
+      pre: fontawesome/instagram
+      weight: 1
+
+    - name: Facebook
+      url: ""
+      pre: fontawesome/facebook
+      weight: 2
+
+    - name: LinkedIn
+      url: ""
+      pre: fontawesome/linkedin
+      weight: 3
+
+    - name: Cardskipper
+      url: ""
+      pre: fontawesome/cardskipper
+      weight: 4
+
+  nav:
+    - name: Home
+      url: ""
+      weight: 1
+
+    - name: About
+      url: about
+      weight: 2
+
+    - name: Board
+      url: board/2022
+      weight: 3
+
+    - name: Portfolio
+      url: portfolio
+      weight: 4
+
+    - name: Get in touch
+      url: contact
+      weight: 5
+
+# Site Params
+params:
+  # logo: /images/logo.png
+  logo: "/upf/upf-icon"
+  logo_footer: "/upf/upf-logo"
+  dateFormat: 26 FEB 1994
+  # Site Params
+  description: Roxo Hugo themes | Design Agency Template by StaticMania
+  author: StaticMania
+  # Google Analitycs
+  googleAnalitycsID: Your ID
+  # We're using formspree.io for form handling, paste your formspree url below
+  fabform: "https://fabform.io/f/USAg2Jl"
+
+  # Contact Form
+  contactForm:
+    placeholder_first_name: First Name
+    placeholder_last_name: Last Name
+    placeholder_email: Email
+    placeholder_project_type: Project Type
+    placeholder_about_the_project: About the Project
+    send_message: Send Message
+
+    projectType:
+      - value: gd
+        title: Graphics Design
+
+      - value: wd
+        title: Web Design
+
+  # Navbar Action Button
+  navAction:
+    status: true
+    name: Get in touch
+    url: contact
+
+  # Banner Section
+  banner:
+    enable: true
+    #background_image   : images/upf/background.png
+    title: UPF Linköping
+    heading: Student Association of Foreign Affairs
+    primary_button: See Our Works
+    primary_button_url: portfolio
+    secondary_button: Connect with Us
+    secondary_button_url: contact
+
+  call_to_action:
+    enable: true
+    background_image: images/backgrounds/cta-background.jpg
+    title: LET’S WORK TOGETHER
+    primary_button: Submit Query
+    primary_button_url: contact
+    secondary_button: Not Convinced
+    secondary_button_url: portfolio
+  
+  footer:
+    # Footer Contact Info
+    contactInfo:
+      title: Contact Info
+      address: "Kårallen, Linköping,<br>58183, SE"
+      email: info@upflinkoping.org
+
+    # Footer Sitemap
+    sitemap:
+      title: Sitemap
+      link:
+        - name: About Company
+          url: about
+        - name: Projects
+          url: portfolio
+        - name: Board
+          url: board/2022
+        - name: Contact
+          url: contact
+
+    # Footer Social Media
+    social:
+      title: Social Media
+      link:
+        - name: Instagram
+          url: "#"
+        - name: Linkedin
+          url: "#"
+        - name: Facebook
+          url: "#"
+        - name: Cardskipper
+          url: "#"
+
+    # Footer Service
+    service:
+      title: "We help brands:"
+      description: >-
+        develop design solutions<br>produce valuable cultural content<br>create
+        fresh brand experience
+
+taxonomies:
+  category: categories
+  tag: tags
+  board: board
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+  imports:
+    - path: github.com/theNewDynamic/hugo-module-tnd-styles
+    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+#tnd_styles:
+#  styles:
+#    - name: main
+#      path: css/styles/td.css
+#    - name: td
+#      path: css/styles/td.css
+#      inline: true
+
+#  fonts:
+#    - family: aileron
+#      file: fonts/files/aileron.otf
+#      weight: "400"
+#      style: normal
