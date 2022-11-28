@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   {{ with .Site.Params.author }}
-  <meta name="author" content="{{ . }}">
+    <meta name="author" content="{{ . }}" />
   {{ end }}
   {{ hugo.Generator }}
 
@@ -23,6 +23,10 @@
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
+
+  {{ "<!-- calendar-css -->" | safeHTML }}
+  {{ $calendar := resources.Get "css/calendar.css" | minify }}
+  <link rel="stylesheet" href="{{ $calendar.Permalink }}" />
 
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />

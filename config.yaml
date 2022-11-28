@@ -41,13 +41,17 @@ menu:
       url: board/2022
       weight: 3
 
+    - name: Calendar
+      url: calendar
+      weight: 4
+
     - name: Portfolio
       url: portfolio
-      weight: 4
+      weight: 5
 
     - name: Get in touch
       url: contact
-      weight: 5
+      weight: 6
 
 # Site Params
 params:
@@ -104,7 +108,7 @@ params:
     primary_button_url: contact
     secondary_button: Not Convinced
     secondary_button_url: portfolio
-  
+
   footer:
     # Footer Contact Info
     contactInfo:
@@ -122,51 +126,3 @@ params:
           url: portfolio
         - name: Board
           url: board/2022
-        - name: Contact
-          url: contact
-
-    # Footer Social Media
-    social:
-      title: Social Media
-      link:
-        - name: Instagram
-          url: "#"
-        - name: Linkedin
-          url: "#"
-        - name: Facebook
-          url: "#"
-        - name: Cardskipper
-          url: "#"
-
-    # Footer Service
-    service:
-      title: "We help brands:"
-      description: >-
-        develop design solutions<br>produce valuable cultural content<br>create
-        fresh brand experience
-
-taxonomies:
-  category: categories
-  tag: tags
-  board: board
-
-module:
-  mounts:
-    - source: assets
-      target: assets
-  imports:
-    - path: github.com/theNewDynamic/hugo-module-tnd-styles
-    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
-#tnd_styles:
-#  styles:
-#    - name: main
-#      path: css/styles/td.css
-#    - name: td
-#      path: css/styles/td.css
-#      inline: true
-
-#  fonts:
-#    - family: aileron
-#      file: fonts/files/aileron.otf
-#      weight: "400"
-#      style: normal
