@@ -1,11 +1,10 @@
 ---
-title: "ACTIVITIES"
-# date: 2019-12-23T15:56:43+06:00
-type: portfolio
-items_type: activity
-image: "images/projects/project-thumb-two.jpg"
+title: "Tallinn"
+# date: 2019-12-23T15:58:10+06:00
+type: trip
+image: "images/projects/project-thumb-one.jpg"
 category: ["TEXT"]
-project_images: ["images/projects/project-details-image-one.jpg", "images/projects/project-details-image-two.jpg"]
+project_images: ["images/projects/project-details-image-one.jpg"]
 ---
 
 The “Seamless Watch” watch has all the features that users expect in a digital watch, and some unusual features.
