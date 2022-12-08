@@ -41,3 +41,9 @@
 @import "components/footer";
 
 //{{ printf "%#v" $.Site }}
+
+// @import "imported/image-modal.scss";
+
+@import "imported/magnific/magnific";
+
+@import "gallery";

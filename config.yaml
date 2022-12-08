@@ -126,3 +126,38 @@ params:
           url: portfolio
         - name: Board
           url: board/2022
+        - name: Contact
+          url: contact
+
+    # Footer Social Media
+    social:
+      title: Social Media
+      link:
+        - name: Instagram
+          url: "#"
+        - name: Linkedin
+          url: "#"
+        - name: Facebook
+          url: "#"
+        - name: Cardskipper
+          url: "#"
+
+    # Footer Service
+    service:
+      title: "We help brands:"
+      description: >-
+        develop design solutions<br>produce valuable cultural content<br>create
+        fresh brand experience
+
+taxonomies:
+  category: categories
+  tag: tags
+  board: board
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+  imports:
+    - path: github.com/theNewDynamic/hugo-module-tnd-styles
+    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"

@@ -1,3 +1,9 @@
 {{ define "main" }}
 
+{{ if .Params.feature_image }}
+<div class="site-project-single-image">
+  <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image" />
+</div>
+{{ end }}
+
 {{ end }}

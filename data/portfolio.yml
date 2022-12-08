@@ -1,3 +1,11 @@
 enable: true
 title: "WHAT WE DO"
 subtitle: "Crafting experiences and seeking to make the complex clear & beautiful."
+
+items:
+  - title: Activities
+    image: "images/projects/project-thumb-two.jpg"
+  - title: Lectures
+    image: "images/projects/project-thumb-four.jpg"
+  - title: Projects
+    image: 

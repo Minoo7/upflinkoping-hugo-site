@@ -1,40 +1,90 @@
-$(document).ready(function() {
+$(document).ready(function () {
   "use strict";
   // Scroll to top
-  $("a[href='#top']").click(function() {
+  $("a[href='#top']").click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 
   // Smooth scroll
-  $('a.scroll-to').on('click', function (event) {
+  $("a.scroll-to").on("click", function (event) {
     var $anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: ($($anchor.attr('href')).offset().top - 50)
-    }, 700);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $($anchor.attr("href")).offset().top - 50,
+        },
+        700
+      );
     event.preventDefault();
   });
 
-  activeOpacityListener('.site-team-member');
-  activeOpacityListener('.site-testimonial-item');
+  activeOpacityListener(".site-team-member");
+  activeOpacityListener(".site-testimonial-item");
+
+  $(".gallery-link").on("click", function () {
+    $(this).find(".gallery").magnificPopup("open");
+  });
+
+  $(".gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    preload: [1,2],
+    closeOnContentClick: false,
+    mainClass: "mfp-with-zoom mfp-img-mobile",
+    image: {
+      verticalFit: true,
+      titleSrc: function (item) {
+        return (
+          item.el.attr("title") +
+          ' &middot; <a class="image-source-link" href="' +
+          item.el.attr("data-source") +
+          '" target="_blank">image source</a>'
+        );
+      },
+    },
+    gallery: {
+      enabled: true,
+    },
+    zoom: {
+      enabled: true,
+      duration: 300, // don't foget to change the duration also in CSS
+      opener: function (element) {
+        return element.find("img");
+      },
+    },
+    callbacks: {
+      lazyLoad: function(item) {
+        console.log(item); // Magnific Popup data object that should be loaded
+      },
+      close: function () {
+        //var magnificPopup = $.magnificPopup.instance;
+        //$("#first").attr("href", magnificPopup.currItem.src)
+        //$("#first").attr("data-source", magnificPopup.currItem.src)
+        //$("#first img").attr("src", magnificPopup.currItem.src);
+        //magnificPopup.index = 2;        
+      }
+    }
+  });
 });
 
 function activeOpacityListener(item) {
-  $(item).on('mouseenter', function(){
-    $(item).addClass('inactive');
-    $(this).removeClass('inactive').addClass('active');
+  $(item).on("mouseenter", function () {
+    $(item).addClass("inactive");
+    $(this).removeClass("inactive").addClass("active");
   });
-  $(item).on('mouseleave', function(){
-    $(item).removeClass('inactive');
-    $(item).removeClass('active');
+  $(item).on("mouseleave", function () {
+    $(item).removeClass("inactive");
+    $(item).removeClass("active");
   });
 }
 
-$(window).on('scroll', function () {
+$(window).on("scroll", function () {
   var windscroll = $(window).scrollTop();
   if (windscroll >= 100) {
-    $('.site-navigation').addClass('nav-bg');
+    $(".site-navigation").addClass("nav-bg");
   } else {
-    $('.site-navigation').removeClass('nav-bg');
+    $(".site-navigation").removeClass("nav-bg");
   }
 });

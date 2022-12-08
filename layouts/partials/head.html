@@ -28,6 +28,8 @@
   {{ $calendar := resources.Get "css/calendar.css" | minify }}
   <link rel="stylesheet" href="{{ $calendar.Permalink }}" />
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
   <link rel="icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon" />

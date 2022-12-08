@@ -1,0 +1,16 @@
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="row">
+      {{ $images := resources.Match . }}
+      {{ $first := index ($images) 0 }}
+      <div class="gallery-item">
+        <a id="first" href="{{ $first | absURL }}" data-source="{{ $first | absURL }}"><img src="{{ $first | absURL }}" alt="image" /></a>
+      </div>
+      {{ range after 1 $images }}
+        <div class="gallery-item">
+          <a href="{{ .RelPermalink | absURL }}" data-source="{{ .RelPermalink | absURL }}"></a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

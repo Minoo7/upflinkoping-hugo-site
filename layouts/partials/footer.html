@@ -83,3 +83,12 @@
 <script src="{{ $vendor.Permalink }}"></script>
 {{ $script := resources.Get "js/script.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>
+
+<script src="{{"vendor/slick/slick.min.js" | absURL }}"></script>
+<script src="{{"vendor/aos/aos.js" | absURL}}"></script>
+<script src="{{"vendor/match-height/match-height.js" | absURL}}"></script>
+
+<script src='{{ (resources.Get "js/magnific-popup.js" | minify ).Permalink }}'></script>
+{{/*  <script src="{{"vendor/g-map/gmap.js" | absURL}}"></script>  */}}
+<!-- {{ $formhandler := resources.Get "js/formhandler.js" | minify}} 
+<script src="{{ $formhandler.Permalink}}"></script> -->

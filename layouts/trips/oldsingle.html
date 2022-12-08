@@ -1,0 +1,54 @@
+{{ define "main" }}
+  {{/*  <section class="site-project-single-section">  */}}
+    {{/*  <div class="container">  */}}
+      {{/*  <div class="row">  */}}
+        {{/*  <div class="col-lg-8 mx-auto">  */}}
+          {{/*  <div class="site-project-single">  */}}
+            {{/*  <p>{{ .PublishDate.Format "January 2, 2006" }}</p>  */}}
+            {{/*  <h1>{{ .Title }}</h1>  */}}
+            {{/*  <div class="site-project-single-description">  */}}
+              {{/*  {{ .Content }}  */}}
+            {{/*  </div>  */}}
+{{/*    */}}
+            {{/*  Slideshow  */}}
+            {{/*  {{ partial "slideshow" .Params.gallery }}  */}}
+{{/*    */}}
+{{/*    */}}
+            {{/*  <div class="site-project-single-image">  */}}
+              {{/*  {{ range .Params.project_images }}  */}}
+                {{/*  <img src="{{ . | absURL }}" alt="project image" />  */}}
+              {{/*  {{ end }}  */}}
+            {{/*  </div>  */}}
+            {{/*  {{ if .NextInSection }}  */}}
+              {{/*  <div class="site-project-single-action">  */}}
+                {{/*  <a href="{{ .NextInSection.Permalink }}">  */}}
+                  {{/*  <span class="link-area">  */}}
+                    {{/*  <span data-text="Next Project"> Next Project </span>  */}}
+                  {{/*  </span>  */}}
+                  {{/*  <img src="{{ "images/to-top.svg" | absURL }}" alt="next project" />  */}}
+                {{/*  </a>  */}}
+              {{/*  </div>  */}}
+            {{/*  {{ end }}  */}}
+          {{/*  </div>  */}}
+        {{/*  </div>  */}}
+      {{/*  </div>  */}}
+    {{/*  </div>  */}}
+  {{/*  </section>  */}}
+
+  <section class="site-blog details">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <article class="site-blog-details">
+            <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+            <h2 class="title">{{ .Title }}</h2>
+            {{ .Content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "call-to-action.html" . }}
+
+{{ end }}
