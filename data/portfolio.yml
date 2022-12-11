@@ -4,8 +4,19 @@ subtitle: "Crafting experiences and seeking to make the complex clear & beautifu
 
 items:
   - title: Activities
+    url: "activities"
+    image: "images/portfolio/lectures/lectures.svg"
+    category: [movies]
+  - title: Trips
+    url: trips
     image: "images/projects/project-thumb-two.jpg"
+    category: [movies]
   - title: Lectures
-    image: "images/projects/project-thumb-four.jpg"
+    url: lectures
+    image: "images/portfolio/lectures/lectures.svg"
+    #image: "images/projects/project-details-image-two.jpg"
+    category: [movies]
   - title: Projects
-    image: 
+    url: projects
+    image: "images/projects/project-thumb-three.jpg"
+    category: [movies]

@@ -9,16 +9,19 @@
               <p>{{ .subtitle }}</p>
             </div>
           </div>
-          {{ range first 4 (where $.Site.RegularPages "Type" "portfolio") }}
+          {{/*  <a href='{{ "/images/portfolio/lectures/lectures.svg" }}'>dd</a>  */}}
+          {{ range first 1 .items }}
             <div class="col-lg-6 col-md-10 mx-auto">
               <div class="site-project-item">
                 <div class="site-project-item-thumb">
-                  <img src="{{ .Params.Image | absURL }}" alt="project-thumb" />
+                  {{/*  <img srcset="{{ .image | absURL }}" alt="project-thumb" />  */}}
+                  {{ partial "svg.html" "/portfolio/lectures/lectures" }}
+                  {{/*  <img srcset='{{ "images/portfolio/lectures/lectures.svg" }}' alt="">  */}}
                 </div>
                 <div class="site-project-item-content">
-                  <span>{{ delimit .Params.category ", " }}</span>
-                  <h3>{{ .Title }}</h3>
-                  <a href="{{ .Permalink }}" class="read-more">view examples</a>
+                  <span>{{ delimit .category ", " }}</span>
+                  <h3>{{ upper .title }}</h3>
+                  <a href="{{ .url }}" class="read-more">view examples</a>
                 </div>
               </div>
             </div>
@@ -29,5 +32,6 @@
         </div>
       </div>
     </section>
+    <div class="temp" style="background-color:red; width:10px; height : 1px; position: fixed;"></div>
   {{ end }}
 {{ end }}

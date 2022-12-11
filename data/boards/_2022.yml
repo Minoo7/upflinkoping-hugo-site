@@ -1,55 +1,80 @@
 enable: true
 year: 2022
+images_path: images/board/
 members:
-  - image: images/team/team-member-one.jpg
-    name: PABLO ESCOBAR
-    designation: Creative Director
+  - image: vivian_vu.jpg
+    name: Vivian Vu
+    designation: President
     socials:
-      - link: https://www.linkedin.com/
+      - link: https://www.linkedin.com/in/vivian-vu-397376161/
         icon: linkedin
-      - link: https://www.instagram.com/
-        icon: instagram
 
-  - image: images/team/team-member-two.jpg
-    name: MONTINO RIAU
-    designation: Product Manager
+  - image: suryansh_dhariwal.jpg
+    name: Suryansh Dhariwal
+    designation: Vice President
     socials:
-      - link: https://www.linkedin.com/
+      - link: https://www.linkedin.com/in/suryansh-dhariwal-436901211/
         icon: linkedin
-      - link: https://www.instagram.com/
-        icon: instagram
 
-  - image: images/team/team-member-three.jpg
-    name: ALEX NAASRI
-    designation: Chief Design Officer
+  - image: anna-maria_polasek.jpg
+    name: Anna-Maria Polasek
+    designation: Secretary
     socials:
-      - link: https://www.linkedin.com/
+      - link: https://www.linkedin.com/in/anna-maria-polasek-3980ab18a/
         icon: linkedin
-      - link: https://www.instagram.com/
-        icon: instagram
-  - image: images/team/team-member-four.jpg
-    name: HONGMAN CHIOA
-    designation: UX Researcher
-    socials:
-    - link: https://www.linkedin.com/
-      icon: linkedin
-    - link: https://www.instagram.com/
-      icon: instagram
 
-  - image: images/team/team-member-five.jpg
-    name: SANTIO ANDRESS
-    designation: Content Researcher
+  - image: gabriel_cedergren.jpg
+    name: Gabriel Cedergren
+    designation: Treasurer
     socials:
-    - link: https://www.linkedin.com/
-      icon: linkedin
-    - link: https://www.instagram.com/
-      icon: instagram
-
-  - image: images/team/team-member-six.jpg
-    name: RAMESH PAUL
-    designation: Creative Designer
-    socials:
-      - link: https://www.linkedin.com/
+      - link: https://www.linkedin.com/in/gabrielcedergren/
         icon: linkedin
-      - link: https://www.instagram.com/
-        icon: instagram
+
+  - image: elyssa_tan.jpg
+    name: Elyssa Tan
+    designation: Head of Program
+    socials:
+      - link: https://www.linkedin.com/in/elyssajtan/
+        icon: linkedin
+
+  - image: janine_wallrabe.jpg
+    name: Janine Wallrabe
+    designation: Head of Program
+    socials:
+      - link: https://www.linkedin.com/in/janine-wallrabe-099b881b0/
+        icon: linkedin
+
+  - image: mariska_helwig.jpg
+    name: Mariska Helwig
+    designation: Head of Activity
+    socials:
+      - link: https://www.linkedin.com/in/mariska-helwig-6b7b4118a/
+        icon: linkedin
+
+  - image: niccolo_jurkoweit.jpg
+    name: Niccolo Jurkoweit
+    designation: Head of Travel
+    socials:
+      - link: https://www.linkedin.com/in/niccolo-jurkoweit-3227aa1b4/
+        icon: linkedin
+
+  - image: karolina_skalova.jpg
+    name: Karolína Skálová
+    designation: Head of PR & Marketing
+    socials:
+      - link: https://www.linkedin.com/in/karolinaskalova/
+        icon: linkedin
+
+  - image: vincent_garbrant.jpg
+    name: Vincent Garbrant
+    designation: Webmaster
+    socials:
+      - link: https://www.linkedin.com/in/vincent-garbrant-a1a793211/
+        icon: linkedin
+
+  - image: nugzari_batsikadze.jpg
+    name: Nugzari Batsikadze
+    designation: UFS Representative 
+    socials:
+      - link: https://www.linkedin.com/in/nugzari-batsikadze-320493202/
+        icon: linkedin

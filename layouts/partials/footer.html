@@ -6,7 +6,7 @@
           <a href="{{ .Site.BaseURL }}">
             {{/*  {{ $image := (resources.Get .logo_footer).Resize "200x" }}  */}}
             {{/*  <img src="{{ $image.RelPermalink | absURL }}" alt="group photos" />  */}}
-            {{ partial "svg.html" .Site.Params.Logo_footer }}
+            {{ partial "svg-inline.html" .Site.Params.Logo_footer }}
             
           </a>
         </div>

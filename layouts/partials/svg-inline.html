@@ -1,6 +1,6 @@
-<div class="svg-parent">
+<span class="inline-svg" >
     {{- $fname:=print "assets/images/" . ".svg" -}}
     {{- $path:="<path" -}}
     {{- $fill:="<path fill=\"currentColor\"" -}}
     {{ replace (readFile $fname) $path $fill | safeHTML }}
-</div>
+</span>

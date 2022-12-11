@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-      {{ partial "svg.html" .Site.Params.Logo }}
+      {{ partial "svg-inline.html" .Site.Params.Logo }}
       {{/* <img src="{{ .Site.Params.logo }}" alt="logo" height=40px /> */}}
     </a>
     <button
@@ -19,7 +19,7 @@
       {{ range .Site.Menus.social }}
         <li>
           <a href="#" class="item">
-            {{ partial "svg.html" .Pre }}
+            {{ partial "svg-inline.html" .Pre }}
           </a>
         </li>
       {{ end }}

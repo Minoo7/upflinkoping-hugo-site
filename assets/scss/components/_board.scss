@@ -20,6 +20,7 @@
     }
     &-image {
       position: absolute;
+      //display: flex;
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -30,6 +31,10 @@
       @include tablet {
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+      img {
+        object-position: left left;
+        // scale: 1.4;
       }
     }
     &-content {
