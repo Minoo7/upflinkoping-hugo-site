@@ -2,5 +2,5 @@
 	path = themes/roxo
 	url = https://github.com/StaticMania/roxo-hugo.git
 [submodule "bootstrap"]
-	path = bootstrap
+	path = static/css/bootstrap
 	url = https://github.com/upflinkoping/bootstrap

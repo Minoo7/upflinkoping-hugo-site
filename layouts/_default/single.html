@@ -1,9 +1,26 @@
 {{ define "main" }}
+  {{/* {{ if .Params.feature_image }} */}}
+  {{/* <div class="site-project-single-image"> */}}
+  {{/* <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image" /> */}}
+  {{/* </div> */}}
+  {{/* {{ end }} */}}
+  <section class="site-blog">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <article class="site-blog-details">
+            <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+            <h2 class="title">{{ title .Title }}</h2>
 
-{{ if .Params.feature_image }}
-<div class="site-project-single-image">
-  <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image" />
-</div>
-{{ end }}
+            {{/* Slideshow */}}
+            {{ partial "slideshow" .Params.gallery }}
 
+            {{ .Content }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "call-to-action.html" . }}
 {{ end }}

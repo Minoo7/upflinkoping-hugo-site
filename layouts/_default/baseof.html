@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{- partialCached "head.html" . -}}
   <body>
-    {{/*  {{- partialCached "header.html" . -}}  */}}
+    {{- partialCached "header.html" . -}}
     <main>
       {{- block "main" . }}{{- end }}
     </main>

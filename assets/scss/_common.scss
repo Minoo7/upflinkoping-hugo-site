@@ -85,6 +85,14 @@ textarea.form-control {
   transition: all 0.3s $site-ease;
 }
 
+ul.unstyled {
+  //list-unstyled w-100 m-0
+  // @extend .list-unstyled;
+  // @extend .w-100;
+  // @extend .m-0;
+  // overflow: hidden;
+}
+
 @mixin text-color($color) {
   * {
     color: $color;

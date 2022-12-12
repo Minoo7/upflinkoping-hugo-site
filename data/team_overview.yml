@@ -2,4 +2,4 @@ enable  : true
 title   : "OUR TEAM"
 board : "images/team-overview/group-photo.jpg"
 subtitle: "MORE ABOUT US"
-primary_button_url: team
+primary_button_url: board/2022

@@ -1,7 +1,7 @@
 ---
 title: "Tallinn"
-date: 2019-12-23T15:56:43+06:00
-category: ["TEXT"]
+date: 2022-11-02
+category: ["2022"]
 image: "images/portfolio/trips/tallinn/cover.jpg"
 # feature_image: "images/portfolio/trips/tallinn/cover.jpg"
 gallery: "images/portfolio/trips/tallinn/gallery/*"

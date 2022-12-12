@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <section class="site-project-single-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-l2">
+          <div class="site-project-single">
+            <h1>{{ .Title }}</h1>
+            <div class="site-project-single-description">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {{ range (where $.Site.RegularPages "Type" .Section) }}
+          <div class="col-lg-6 col-md-10 mx-auto">
+            <div class="site-project-item">
+              <div class="site-project-item-thumb">
+                <img src="{{ .Params.Image | absURL }}" width="100%" alt="project-thumb" />
+              </div>
+              <div class="site-project-item-content">
+                <span>{{ delimit .Params.category ", " }}</span>
+                <h3>{{ title .Title }}</h3>
+                <a href="{{ .Permalink }}" class="read-more">view project</a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <div class="col-12">
+    <div class="site-project-pagination">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+  {{ partial "call-to-action.html" . }}
+{{ end }}

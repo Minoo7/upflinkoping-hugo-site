@@ -1,7 +1,10 @@
-baseURL: "http://example.org/"
+baseURL: "http://upflinkoping.com/"
 languageCode: en-us
 title: Roxo | Creative Design Agency
 summarylength: 25
+
+register: &register "https://apply.cardskipper.se/hr3"
+linktree: &linktree "https://linktr.ee/upflinkoping"
 
 # Site Menus
 menu:
@@ -9,22 +12,22 @@ menu:
 
   social:
     - name: Instagram
-      url: ""
+      url: "https://www.instagram.com/upflinkoping/"
       pre: fontawesome/instagram
       weight: 1
 
     - name: Facebook
-      url: ""
+      url: "https://www.facebook.com/UPFlinkoping"
       pre: fontawesome/facebook
       weight: 2
 
     - name: LinkedIn
-      url: ""
+      url: "https://www.linkedin.com/company/upf-linkoping/"
       pre: fontawesome/linkedin
       weight: 3
 
     - name: Cardskipper
-      url: ""
+      url: *register
       pre: fontawesome/cardskipper
       weight: 4
 
@@ -33,9 +36,9 @@ menu:
       url: ""
       weight: 1
 
-    - name: About
-      url: about
-      weight: 2
+    #- name: About
+      #url: about
+      #weight: 2
 
     - name: Board
       url: board/2022
@@ -49,8 +52,8 @@ menu:
       url: portfolio
       weight: 5
 
-    - name: Get in touch
-      url: contact
+    - name: Learn More
+      url: *linktree
       weight: 6
 
 # Site Params
@@ -86,8 +89,8 @@ params:
   # Navbar Action Button
   navAction:
     status: true
-    name: Get in touch
-    url: contact
+    name: Learn More
+    url: *linktree
 
   # Banner Section
   banner:
@@ -95,19 +98,19 @@ params:
     #background_image   : images/upf/background.png
     title: UPF Linköping
     heading: Student Association of Foreign Affairs
-    primary_button: See Our Works
+    primary_button: See what we do
     primary_button_url: portfolio
-    secondary_button: Connect with Us
-    secondary_button_url: contact
+    secondary_button: Become a member
+    secondary_button_url: *register
 
   call_to_action:
     enable: true
     background_image: images/backgrounds/cta-background.jpg
-    title: LET’S WORK TOGETHER
-    primary_button: Submit Query
-    primary_button_url: contact
+    title: become a member today
+    primary_button: Join us
+    primary_button_url: *register
     secondary_button: Not Convinced
-    secondary_button_url: portfolio
+    secondary_button_url: *register
 
   footer:
     # Footer Contact Info
@@ -120,27 +123,29 @@ params:
     sitemap:
       title: Sitemap
       link:
-        - name: About Company
-          url: about
+        # - name: About Company
+          # url: about
         - name: Projects
           url: portfolio
         - name: Board
           url: board/2022
         - name: Contact
           url: contact
+        - name: Calendar
+          url: calendar
 
     # Footer Social Media
     social:
       title: Social Media
       link:
         - name: Instagram
-          url: "#"
+          url: "https://www.instagram.com/upflinkoping/"
         - name: Linkedin
-          url: "#"
+          url: "https://www.linkedin.com/company/upf-linkoping/"
         - name: Facebook
-          url: "#"
+          url: "https://www.facebook.com/UPFlinkoping"
         - name: Cardskipper
-          url: "#"
+          url: *register
 
     # Footer Service
     service:

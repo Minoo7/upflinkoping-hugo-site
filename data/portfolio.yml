@@ -3,20 +3,19 @@ title: "WHAT WE DO"
 subtitle: "Crafting experiences and seeking to make the complex clear & beautiful."
 
 items:
+  - title: Lectures
+    url: lectures
+    image: "portfolio/lectures/lectures.svg"
+    category: [movies]
   - title: Activities
     url: "activities"
-    image: "images/portfolio/lectures/lectures.svg"
+    image: "portfolio/activities/activities_baseline.svg"
     category: [movies]
   - title: Trips
     url: trips
-    image: "images/projects/project-thumb-two.jpg"
-    category: [movies]
-  - title: Lectures
-    url: lectures
-    image: "images/portfolio/lectures/lectures.svg"
-    #image: "images/projects/project-details-image-two.jpg"
+    image: "portfolio/trips/trips.svg" 
     category: [movies]
   - title: Projects
     url: projects
-    image: "images/projects/project-thumb-three.jpg"
+    image: "portfolio/projects/projects.svg"
     category: [movies]

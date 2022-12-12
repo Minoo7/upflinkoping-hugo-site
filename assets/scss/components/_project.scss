@@ -6,7 +6,25 @@
     overflow: hidden;
   }
 
+  article:nth-of-type(3n + 1) &-item {
+    color: $white;
+    background-color: $black;
+    @include desktop {
+      color: $black;
+      background-color: $upf-yellow;
+    }
+  }
+  article:nth-of-type(odd) &-item {
+    @include desktop {
+      color: $white !important;
+      background-color: $black !important;
+    }
+  }
+
   &-item {
+    color: $black;
+    background-color: $upf-yellow;
+
     position: relative;
     margin-bottom: 30px;
     transition: all 0.3s ease-in;
@@ -54,25 +72,23 @@
     }
 
     %thumb {
+      overflow: hidden;
       img {
         width: 100%;
         object-fit: cover;
       }
       .svg-parent {
         width: 100%;
-        color: $black;
-        background-color: $upf-yellow;
         svg {
           position: relative;
-          //top: -170px;
-          //top: -75px;
           width: 100%;
-          // left: 25%;
-          scale: 0.6;
-          g {
-            // translate: 50% 50%;
-            // transform: translate(20px,20px);
+          &.larger {
+            scale: 0.7;
           }
+          @include mobile {
+            scale: 0.4 !important;
+          }
+          scale: 0.6;
         }
       }
     }
