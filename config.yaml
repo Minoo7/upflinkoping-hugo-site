@@ -13,22 +13,22 @@ menu:
   social:
     - name: Instagram
       url: "https://www.instagram.com/upflinkoping/"
-      pre: fontawesome/instagram
+      pre: "fab fa-instagram"
       weight: 1
 
     - name: Facebook
       url: "https://www.facebook.com/UPFlinkoping"
-      pre: fontawesome/facebook
+      pre: "fab fa-facebook"
       weight: 2
 
     - name: LinkedIn
       url: "https://www.linkedin.com/company/upf-linkoping/"
-      pre: fontawesome/linkedin
+      pre: "fab fa-linkedin"
       weight: 3
 
     - name: Cardskipper
       url: *register
-      pre: fontawesome/cardskipper
+      pre: images/fontawesome/cardskipper
       weight: 4
 
   nav:
@@ -59,8 +59,8 @@ menu:
 # Site Params
 params:
   # logo: /images/logo.png
-  logo: "/upf/upf-icon"
-  logo_footer: "/upf/upf-logo"
+  logo: "images/upf/upf-icon"
+  logo_footer: "images/upf/upf-logo"
   dateFormat: 26 FEB 1994
   # Site Params
   description: Roxo Hugo themes | Design Agency Template by StaticMania
@@ -112,6 +112,13 @@ params:
     secondary_button: Not Convinced
     secondary_button_url: *register
 
+  error:
+    code: 404
+    text: PAGE NOT FOUND
+    button:
+      url: /
+      text: Go back home
+
   footer:
     # Footer Contact Info
     contactInfo:
@@ -129,8 +136,8 @@ params:
           url: portfolio
         - name: Board
           url: board/2022
-        - name: Contact
-          url: contact
+        #- name: Contact
+        #  url: contact
         - name: Calendar
           url: calendar
 
@@ -176,4 +183,5 @@ module:
     - path: github.com/theNewDynamic/hugo-module-tnd-styles
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
     - path: github.com/shoginn/wowchemy-block-instagram-behold
+    - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
     #- path: github.com/theNewDynamic/huge

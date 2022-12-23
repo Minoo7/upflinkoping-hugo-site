@@ -1,7 +1,4 @@
 <style>
-  .breadcrumb {
-    background-color: unset;
-  }
   .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
   }
@@ -10,7 +7,7 @@
   }
 </style>
 
-<ul class="breadcrumb">
+<ul class="breadcrumb pl-0 bg-white">
   {{ $tempScratch := newScratch }}
   {{ template "breadcrumbnav" (dict "tempScratch" $tempScratch "p1" . "p2" .) }}
 </ul>
@@ -28,15 +25,14 @@
     {{ .tempScratch.Add "classes" "active" }}
   {{ end }}
 
-  {{ .tempScratch.Set "title" (cond (.p1.IsHome) "Home" .p1.Title) }}
+  {{ .tempScratch.Set "title" (cond (.p1.IsHome) "Home" (title .p1.Title)) }}
 
-  {{/* {{ delimit (.tempScratch.Get "classes") " " }} */}}
   <li class="{{ delimit (.tempScratch.Get "classes") " " }}">
     {{ if ne (.tempScratch.Get "last") true }}
       <a href="{{ .p1.RelPermalink }}">{{ .tempScratch.Get "title" }}</a>
     {{ else }}
       <!-- will always be last: -->
-      {{ .p1.Title }}
+      {{ .tempScratch.Get "title" }}
     {{ end }}
   </li>
 {{ end }}

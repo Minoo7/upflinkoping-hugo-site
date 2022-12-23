@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ with .Site.Params.error }}
+    <div class="site-error">
+      <div class="container">
+        <div class="row">
+          <div class="col mx-auto text-center">
+            <h1>
+              {{ .code }}
+              <br />
+              <small class="text-muted">{{ .text }}</small>
+            </h1>
+            <a href="{{ .button.url | absURL }}" class="btn btn-primary">
+              <span class="btn-area">
+                <span data-text="{{ .button.text }}">
+                  {{ .button.text }}
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

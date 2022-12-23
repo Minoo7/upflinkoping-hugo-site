@@ -3,13 +3,12 @@
 {{ .context.Scratch.Set "items" .items }}
 {{ $images := resources.Match .images }}
 
-<div id="carousel10" class="carousel" duration="{{ .duration }}" items="{{ .items }}">
+<div id="carousel10" class="carousel my-4" duration="{{ .duration }}" items="{{ .items }}">
   <ul>
     {{ range $index, $slide := $images }}
       <li id="c10_slide{{ add $index 1 }}" class="cslide" data-items="none">
         <img src="{{ $slide | absURL }}" alt="" />
       </li>
-      {{ $slide }}
     {{ end }}
   </ul>
   <ol>

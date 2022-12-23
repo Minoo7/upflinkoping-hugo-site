@@ -5,29 +5,6 @@ category: ["Jindan Gong, 2022"]
 image: "images/portfolio/lectures/jindan_gong/cover.png"
 gallery: "images/portfolio/lectures/jindan_gong/gallery/*"
 
-widget: 'github.shoginn.instagram-behold'
-
-# This file represents a page section.
-headless: true
-
-# Order that this section appears on the page.
-weight: 1
-
-# Title at the top of the Section
-title: Follow Me On Instagram
-
-############################
-# Block Configuration Items
-############################
-
-# Instagram button (optional)
-instagram:
-   username: upflinkoping
-
-# Behold block inject
-behold:
-   id: <behold block id>
-
 ---
 
 # Optional Content below feed and button

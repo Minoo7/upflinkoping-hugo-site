@@ -2,7 +2,9 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{- partial "head.html" . -}}
   <body>
-    {{- partialCached "header.html" . -}}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="R0uL1mJk"></script>
+    {{- partial "header.html" . -}} <!-- set to cached -->
     <main>
       {{- block "main" . }}{{- end }}
     </main>

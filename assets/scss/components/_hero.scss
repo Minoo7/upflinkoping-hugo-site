@@ -14,15 +14,9 @@
     padding: 150px 0;
   }
   &-content {
+    
     h1 {
-      margin-bottom: 75px;
-      @include desktop-lg {
-        font-size: 50px;
-        margin-bottom: 50px;
-      }
-      @include mobile {
-        font-size: 40px;
-      }
+      @extend %center-h1;
     }
     &-buttons {
       margin: 0;

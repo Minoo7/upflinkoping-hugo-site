@@ -1,0 +1,22 @@
+{{ with .Site.Data.instagram }}
+  <section class="site-insta">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="section-title mb-0">
+            <h2 class="text-white">{{ .title }}</h2>
+          </div>
+          {{ partial "instagram-behold.html" (dict "behold_id" "azmO64vKLjvzBFeyifko" "instagram_username" "upflinkoping" "dark" false) }}
+          <a href="https://www.instagram.com/upflinkoping" class="btn btn-lg btn-icon btn-secondary">
+            {{ partial "svg" "fab fa-instagram" }}
+            <span class="btn-area d-inline-block ml-2">
+              <span data-text="instagram.com">
+                @{{ .username  | markdownify | emojify | safeHTML }}
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -3,6 +3,7 @@ module github.com/Minoo7/upflinkoping-hugo-site
 go 1.19
 
 require (
+	github.com/UtkarshVerma/hugo-modules/svg-icon-system v0.0.0-20221219203257-71de7c036689 // indirect
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20200.20100 // indirect
 	github.com/shoginn/wowchemy-block-instagram-behold v1.0.0 // indirect
 	github.com/theNewDynamic/huge v0.1.7 // indirect

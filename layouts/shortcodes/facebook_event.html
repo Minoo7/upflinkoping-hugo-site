@@ -1,0 +1,11 @@
+{{/* in future use bootstrap 5 button label */}}
+<div class="post-facebook_event mb-3">
+  <a href="https://www.facebook.com/events/{{ .Get 0 }}" class="btn btn-light bg-white p-0">
+    <div class="post-facebook_event-link">
+      {{ partial "svg" "fab fa-facebook" }}
+    </div>
+    <span class="btn-area ml-2 d-inline-block">
+      <span data-text="facebook.com">Facebook event</span>
+    </span>
+  </a>
+</div>

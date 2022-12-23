@@ -9,19 +9,31 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <article class="site-blog-details">
-            {{ partial "breadcrumb.html" . }}
+            {{- partial "breadcrumb.html" . -}}
             <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
             <h2 class="title">{{ title .Title }}</h2>
+            {{ .Scratch.Set "showInsta" false }}
 
-            {{/* Slideshow */}}
-            {{ partial "slideshow" .Params.gallery }}
+            {{ "<!-- Slideshow -->" | safeHTML }}
+            {{ if .Params.gallery }}
+              {{ partial "carousel.html" (dict "context" . "images" .Params.gallery "duration" "7000") }}
+            {{ else }}
+              {{ .Scratch.Set "showInsta" true }}
+            {{ end }}
 
-            {{ .Content }}
+
+            <div class="content">
+              {{ .Content }}
+            </div>
           </article>
         </div>
       </div>
     </div>
   </section>
+
+  {{ if (.Scratch.Get "showInsta") }}
+    {{ partial "instagram" . }}
+  {{ end }}
 
   {{ partial "call-to-action.html" . }}
 {{ end }}

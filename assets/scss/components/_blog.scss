@@ -1,4 +1,9 @@
 .site {
+  &-insta {
+    @extend .site-project;
+    background-color: $primary-color;
+  }
+
   &-blog {
     @extend .site-project;
     @include mobile {
@@ -87,6 +92,12 @@
       cite {
         margin-top: 10px;
         display: block;
+      }
+      .content {
+        p {
+          color: #343a40;
+          font-size: large;
+        }
       }
     }
   }

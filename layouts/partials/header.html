@@ -1,21 +1,19 @@
 <nav class="navbar navbar-expand-lg site-navigation">
   <div class="container">
-
-    <a class="navbar-brand" href="{{ .Site.BaseURL }}">
-      {{ partial "svg-inline.html" .Site.Params.Logo }}
-      {{/* <img src="{{ .Site.Params.logo }}" alt="logo" height=40px /> */}}
+    <a class="navbar-brand m-0 p-0" href="{{ .Site.BaseURL }}">
+      {{ partial "svg" (print .Site.Params.Logo) }}
     </a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sitenavbar, #navbarsocials">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-      {{/*  <span class="navbar-toggler-icon"></span>  */}}
+      {{/* <span class="navbar-toggler-icon"></span> */}}
     </button>
     <ul class="collapse navbar-collapse navbar-nav form-inline navbar-social w-100" id="navbarsocials">
       {{ range .Site.Menus.social }}
         <li>
           <a href="{{ .URL | absURL }}" class="item">
-            {{ partial "svg-inline.html" .Pre }}
+            {{ partial "svg" (print .Pre) }}
           </a>
         </li>
       {{ end }}
@@ -26,15 +24,15 @@
     <!--Collapse-->
     <div class="collapse navbar-collapse" id="sitenavbar">
       <ul class="navbar-nav ml-auto main-nav">
-        {{ $menu := (.Site.Menus.nav) }}
-        {{ $len := (len $menu) }}
+        {{- $menu := (.Site.Menus.nav) -}}
+        {{- $len := (len $menu) -}}
         {{ range $index, $element := $menu }}
-          {{ if eq (add $index 1) $len }}
+          {{- if eq (add $index 1) $len -}}
             <li class="nav-item">
               <div class="d-grid">
-                <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="{{ .URL | absURL }}">
+                <a class="nav-link btn btn-sm btn-primary btn-sm-rounded text-white" href="{{ .URL | absURL }}">
                   <span class="btn-area">
-                    <span data-bs-text="{{ .Name }}">{{ .Name }}</span>
+                    <span data-text="{{ .Name }}">{{ .Name }}</span>
                   </span>
                 </a>
               </div>
@@ -43,8 +41,8 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ .URL | absURL }}"> {{ .Name }} </a>
             </li>
-          {{ end }}
-        {{ end }}
+          {{- end -}}
+        {{- end -}}
       </ul>
     </div>
   </div>

@@ -18,9 +18,7 @@
     padding: 15px;
   }
   .navbar-brand {
-    padding: 0;
-    margin: 0;
-    span {
+    svg {
       color: $black;
       width: 36.25px; // height 40 px
       max-width: 78px;
@@ -44,12 +42,16 @@
           }
         }
       }*/
-      &:hover {
-        color: $upf-yellow;
+      .icon {
+        display: inline-block;
+        top: 0.15rem;
+        position: relative;
+        transition: all 0.3s $site-ease;
+        height: 30px;
+        &:hover {
+          fill: $upf-yellow;
+        }
       }
-    }
-    svg {
-      height: 30px;
     }
   }
   .line-vertical {

@@ -26,13 +26,6 @@ body {
   }
 }
 
-span {
-  .h2 {
-    
-  }
-}
-
-
 .form-control {
   background: transparent;
   border-radius: 0;
@@ -76,13 +69,17 @@ textarea.form-control {
   height: auto;
 }
 
-.inline-svg {
+.inline-vg {
   display: inline-block;
   height: 1.15rem;
   width: 1.15rem;
   top: 0.15rem;
   position: relative;
   transition: all 0.3s $site-ease;
+}
+
+svg {
+  fill: currentColor;
 }
 
 ul.unstyled {
@@ -96,5 +93,13 @@ ul.unstyled {
 @mixin text-color($color) {
   * {
     color: $color;
+  }
+}
+
+.omg {
+  // display: flex;
+  // width: fit-content;
+  svg {
+    // vertical-align: text-bottom;
   }
 }

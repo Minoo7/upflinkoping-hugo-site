@@ -5,17 +5,17 @@ subtitle: "Crafting experiences and seeking to make the complex clear & beautifu
 items:
   - title: Lectures
     url: /lectures
-    image: "portfolio/lectures/lectures.svg"
+    image: "images/portfolio/lectures/lectures.svg"
     category: [movies]
   - title: Activities
     url: /activities
-    image: "portfolio/activities/activities_baseline.svg"
+    image: "images/portfolio/activities/activities_baseline.svg"
     category: [movies]
   - title: Trips
     url: /trips
-    image: "portfolio/trips/trips.svg" 
+    image: "images/portfolio/trips/trips.svg" 
     category: [movies]
   - title: Projects
     url: /projects
-    image: "portfolio/projects/projects.svg"
+    image: "images/portfolio/projects/projects.svg"
     category: [movies]

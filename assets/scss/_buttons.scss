@@ -1,7 +1,7 @@
 .btn {
   font-family: $secondary-font;
   border: none;
-  color: $white !important;
+  // color: $white !important;
   padding: 20px 45px;
   font-weight: 600;
   border-radius: 0;
@@ -50,6 +50,15 @@
         }
       }
     }
+  }
+  &-anim {
+
+  }
+  &-icon {
+    display: inline-flex;
+  }
+  svg {
+    height: 30px;
   }
 }
 

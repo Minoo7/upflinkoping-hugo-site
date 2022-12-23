@@ -1,7 +1,6 @@
 .site-project {
-  padding: 120px 0;
+  padding: 120px 0 70px;
   overflow: hidden;
-
   .row {
     overflow: hidden;
   }
@@ -82,9 +81,7 @@
         svg {
           position: relative;
           width: 100%;
-          &.larger {
-            scale: 0.7;
-          }
+          fill: currentColor;
           @include mobile {
             scale: 0.4 !important;
           }

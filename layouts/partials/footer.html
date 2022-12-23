@@ -4,7 +4,7 @@
       <div class="col-12">
         <div class="site-footer-logo">
           <a href="{{ .Site.BaseURL }}">
-            {{ partial "svg-inline.html" .Site.Params.Logo_footer }}
+            {{ partial "svg" (print .Site.Params.Logo_footer) }}
           </a>
         </div>
       </div>
@@ -83,5 +83,4 @@
 <!-- {{ $formhandler := resources.Get "js/formhandler.js" | minify }} 
     <script src="{{ $formhandler.Permalink }}"></script> -->
 
-<script type="text/javascript" src='{{ (resources.Get "js/carousel.js" | minify ).Permalink }}'></script>
-<link rel="stylesheet" href='{{ (resources.Get "css/carousel.css" | minify ).Permalink }}' />
+<script type="text/javascript" src="{{ (resources.Get "js/carousel.js" | minify ).Permalink }}"></script>

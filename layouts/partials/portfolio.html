@@ -13,7 +13,9 @@
             <article class="col-lg-6 col-md-10 mx-auto">
               <div class="site-project-item">
                 <div class="site-project-item-thumb">
-                  {{ partial "svg.html" .image }}
+                  <div class="svg-parent">
+                    {{- partial "svg" .image -}}
+                  </div>
                 </div>
                 <div class="site-project-item-content">
                   {{/*  <span>{{ delimit .category ", " }}</span>  */}}

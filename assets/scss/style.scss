@@ -1,5 +1,6 @@
 // @import "bootstrap";
 
+
 @import "fonts";
 
 @import "variables";
@@ -11,6 +12,8 @@
 @import "buttons";
 
 @import "common";
+
+@import "modules";
 
 @import "components/navigation";
 
@@ -51,3 +54,7 @@
 @import "gallery";
 
 @import "imported/carousel";
+
+@import "components/post";
+
+@import "components/error";
