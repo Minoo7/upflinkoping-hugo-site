@@ -1,6 +1,6 @@
-baseURL: "http://upflinkoping.com/"
+baseURL: https://upflinkoping.netlify.app/
 languageCode: en-us
-title: Roxo | Creative Design Agency
+title: UPF Linköping | Student Association of Foreign Affairs
 summarylength: 25
 
 register: &register "https://apply.cardskipper.se/hr3"
@@ -37,8 +37,8 @@ menu:
       weight: 1
 
     #- name: About
-      #url: about
-      #weight: 2
+    #url: about
+    #weight: 2
 
     - name: Board
       url: board/2022
@@ -124,7 +124,7 @@ params:
       title: Sitemap
       link:
         # - name: About Company
-          # url: about
+        # url: about
         - name: Projects
           url: portfolio
         - name: Board
@@ -154,6 +154,13 @@ params:
         develop design solutions<br>produce valuable cultural content<br>create
         fresh brand experience
 
+    copyright:
+      text: UPF Linköping
+      rights: Copyright ©
+      template:
+        text: "- based on a template by"
+        link: StaticMania
+
 taxonomies:
   category: categories
   tag: tags
@@ -163,6 +170,10 @@ module:
   mounts:
     - source: assets
       target: assets
+    - source: _huge
+      target: assets/_huge
   imports:
     - path: github.com/theNewDynamic/hugo-module-tnd-styles
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    - path: github.com/shoginn/wowchemy-block-instagram-behold
+    #- path: github.com/theNewDynamic/huge

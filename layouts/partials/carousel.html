@@ -1,0 +1,22 @@
+{{ .context.Scratch.Set "height" .height }}
+{{ .context.Scratch.Set "unit" .unit }}
+{{ .context.Scratch.Set "items" .items }}
+{{ $images := resources.Match .images }}
+
+<div id="carousel10" class="carousel" duration="{{ .duration }}" items="{{ .items }}">
+  <ul>
+    {{ range $index, $slide := $images }}
+      <li id="c10_slide{{ add $index 1 }}" class="cslide" data-items="none">
+        <img src="{{ $slide | absURL }}" alt="" />
+      </li>
+      {{ $slide }}
+    {{ end }}
+  </ul>
+  <ol>
+    {{ range $index, $page := $images }}
+      <li><a href="#c10_slide{{ add $index 1 }}"></a></li>
+    {{ end }}
+  </ol>
+  <div class="prev">&lsaquo;</div>
+  <div class="next">&rsaquo;</div>
+</div>

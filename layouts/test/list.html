@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div style="margin-top: 200px;"></div>
+  {{/* {{ .Content }} */}} {{/* {{ partial "share-buttons.html" . }} */}}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {{ partial "carousel.html" (dict "context" . "images" "images/portfolio/lectures/jindan_gong/gallery/*" "duration" "7000") }}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #breadcrumbs {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+
+    #breadcrumbs li {
+      display: inline;
+      white-space: nowrap;
+    }
+
+    #breadcrumbs li + li:before {
+      content: ">";
+      padding: 0.3rem;
+    }
+  </style>
+{{ end }}

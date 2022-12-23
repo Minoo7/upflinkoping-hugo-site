@@ -14,7 +14,7 @@
     <ul class="collapse navbar-collapse navbar-nav form-inline navbar-social w-100" id="navbarsocials">
       {{ range .Site.Menus.social }}
         <li>
-          <a href="#" class="item">
+          <a href="{{ .URL | absURL }}" class="item">
             {{ partial "svg-inline.html" .Pre }}
           </a>
         </li>

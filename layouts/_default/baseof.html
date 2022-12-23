@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-  {{- partialCached "head.html" . -}}
+  {{- partial "head.html" . -}}
   <body>
     {{- partialCached "header.html" . -}}
     <main>
