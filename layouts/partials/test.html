@@ -1,78 +1,22 @@
-<section class="gallery" id="gallery">
+<section class="text-bg-white">
   <div class="container">
     <div class="row">
-      {{ $images := resources.Match "images/gallery/*" }}
-      {{ $first := index ($images) 0 }}
-      <div class="gallery-item">
-        <a id="first" href="{{ $first }}" data-source="{{ $first }}"><img src="{{ $first }}" alt="image" /></a>
-      </div>
-      {{ range after 1 $images }}
-        <div class="gallery-item">
-          <a href="{{ .RelPermalink | absURL }}" data-source="{{ .RelPermalink | absURL }}"></a>
+      <div class="col-12">
+        {{/* <div class="card border-0"> */}}
+        {{/* {{ $image := (resources.Get "images/portfolio/lectures/lectures.svg") }} */}} {{/* <img src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo" /> */}}
+        {{/* <div class="card-img-overlay center-btn"></div> */}}
+        {{/* </div> */}}
+        <div class="mx-auto bg-primary">
+          <img src="{{ (resources.Get "images/portfolio/lectures/lectures.svg") }}" class="card-img-top" alt="..." />
+          {{/* <div class="bg-primary">d</div> */}}
+          <div class="card">
+            <div class="card-body hover-item text-bg-gray">
+              <h3>Lectures</h3>
+              <a href="" class="read-more">view examples</a>
+            </div>
+          </div>
         </div>
-      {{ end }}
+      </div>
     </div>
   </div>
 </section>
-<!--<script>
-  $(document).ready(function () {
-    //"use strict";
-    //alert("/{{ $first }}")
-    //alert("{{ $first.Permalink }}");
-
-    $(".gallery").each(function () {
-      $(this).magnificPopup({
-        items: [
-          {
-            src: "{{ $first.Permalink }}",
-          },
-        ],
-        //delegate: "img",
-        type: "image",
-        //closeOnContentClick: false,
-        //mainClass: "mfp-with-zoom mfp-img-mobile",
-        //image: {
-        //  verticalFit: true,
-        //  titleSrc: function (item) {
-        //    return item.el.attr("title") + ' &middot; <a class="image-source-link" href="' + item.el.attr("data-source") + '" target="_blank">image source</a>';
-        //  },
-        //},
-        gallery: {
-          enabled: true,
-        },
-        /*zoom: {
-          enabled: true,
-          duration: 300, // don't foget to change the duration also in CSS
-          opener: function (element) {
-            //return element.find("img");
-          },
-        },*/
-        callbacks: {
-          close: function () {
-            //var magnificPopup = $.magnificPopup.instance;
-            //$("#first").attr("href", magnificPopup.currItem.src);
-            //$("#first").attr("data-source", magnificPopup.currItem.src);
-            //$("#first img").attr("src", magnificPopup.currItem.src);
-            //magnificPopup.index = 2;
-          },
-        },
-      })
-    });
-
-  });
-  //$(this).find(".gallery").magnificPopup.open({
-  //  items: {
-  //    src: '<div class="white-popup">Dynamically created popup</div>', // can be a HTML string, jQuery object, or CSS selector
-  //    type: 'inline'
-  //  }
-  //});
-</script>
-
-<button onclick="myFunction()">open</button>
-<script>
-  function myFunction() {
-    //$(".gallery").magnificPopup.updateItemHTML();
-    //$(".gallery").magnificPopup("open", 0);
-    $(".gallery").magnificPopup("open");
-  }
-</script>-->

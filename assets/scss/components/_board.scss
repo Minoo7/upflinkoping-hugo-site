@@ -1,8 +1,4 @@
-.site-team {
-  .section-title {
-    margin: 40px 0 50px 0;
-  }
-  padding: 100px 0;
+.site-board {
   &-member {
     // background: $gray;
     padding: 65px 30px 30px;
@@ -40,28 +36,22 @@
     &-content {
       h3 {
         font-size: 20px;
-        color: $primary-color;
         margin-bottom: 10px;
         font-weight: 500;
       }
       p {
         font-size: 18px;
-        color: $text-color-dark;
+        color: $text-color;
         margin-bottom: 20px;
         font-weight: 300;
       }
     }
-    &-social {
-      margin: 0;
-      padding: 0;
-      li {
-        display: inline-block;
-        a {
-          color: $text-color-dark;
-        }
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
+    svg {
+      height: 30px;
+      fill: #0a66c2;
+      transition: all 0.3s $site-ease;
+      &:hover {
+        fill: $primary;
       }
     }
   }

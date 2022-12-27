@@ -50,18 +50,18 @@
   
         span {
           font-family: $secondary-font;
-          color: $secondary-color;
+          color: $secondary;
           display: block;
           margin-bottom: 10px;
         }
         h3 {
           margin-bottom: 0;
           a {
-            color: $text-color-dark;
+            color: $text-color;
             transition: 0.3s ease;
             &:hover {
               text-decoration: none;
-              color: $primary-color;
+              color: $primary;
             }
           }
         }
@@ -100,20 +100,20 @@
       font-family: $secondary-font;
       font-size: 18px;
       font-weight: 500;
-      color: $primary-color;
+      color: $primary;
       &::before {
         content: "";
         position: absolute;
         height: 2px;
         width: 100%;
-        background: $primary-color;
+        background: $primary;
         bottom: -2px;
         transition: transform 0.3s $site-ease;
         transform-origin: right;
         transform: scaleX(0);
       }
       &:hover {
-        color: $primary-color;
+        color: $primary;
         text-decoration: none;
         &::before {
           transform: scaleX(1);
@@ -132,7 +132,7 @@
         h1 {
           font-size: 55px;
           span {
-            color: $secondary-color;
+            color: $secondary;
           }
           @include tablet {
             font-size: 40px;
@@ -150,7 +150,7 @@
           display: block;
           font-size: 30px;
           font-weight: 300;
-          color: $text-color-dark;
+          color: $text-color;
           margin-bottom: 20px;
           @include tablet {
             font-size: 25px;
@@ -180,13 +180,13 @@
             border-radius: 0;
             border: none;
             padding: 12px 20px;
-            color: $text-color-dark;
+            color: $text-color;
             font-weight: 300;
             transition: all 0.3s ease;
           }
           &.active {
             .page-link {
-              background-color: $primary-color;
+              background-color: $primary;
               color: $white;
             }
           }
@@ -234,7 +234,7 @@
           position: relative;
           font-size: 24px;
           font-weight: 300;
-          color: $text-color-dark;
+          color: $text-color;
           display: flex;
           margin-left: auto;
           justify-content: flex-end;

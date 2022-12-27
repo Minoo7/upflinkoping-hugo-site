@@ -20,7 +20,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  activeOpacityListener(".site-team-member");
+  activeOpacityListener(".site-board-member");
   activeOpacityListener(".site-testimonial-item");
 
   $(".gallery-link").on("click", function () {
@@ -68,18 +68,31 @@ $(document).ready(function () {
     },
   });
 
-  var container = $(".site-project-item");
-  var content_height = container
-    .children(".site-project-item-content")
-    .outerHeight();
-  var container_height = container.height();
-  for (var svg of document.querySelectorAll(".svg-parent svg")) {
-    var svg_height = svg.getBoundingClientRect().height;
-    var oldY = (container_height / 2) - (svg_height / 2);
-    var newY = (container_height - content_height) / 2 - (svg_height / 2);
-    svg.style.top = - (oldY-newY) + "px";
-  }
+  // var container = $(".site-portfolio-item");
+  // var content_height = container
+    // .children(".site-portfolio-item-content")
+    // .outerHeight();
+  // var container_height = container.height();
+  // for (var svg of document.querySelectorAll(".site-portfolio-item-thumb--svg svg")) {
+    // var svg_height = svg.getBoundingClientRect().height;
+    // var oldY = (container_height / 2) - (svg_height / 2);
+    // var newY = (container_height - content_height) / 2 - (svg_height / 2);
+    // svg.style.top = - (oldY-newY) + "px";
+  // }
+
+  // $(".card-container")
+  // $( ".card-container" ).each(function( index ) {
+    // // alert($( this ).text());
+    // $(this).children(".card-body").height())
+  // });
+
+  // console.log($(".card-container"))
+
+
 });
+var height = $(".card-body").outerHeight();
+$(".card-body").css("bottom", -height);
+$(".card-container").css("padding-bottom", height);
 
 function activeOpacityListener(item) {
   $(item).on("mouseenter", function () {

@@ -10,7 +10,7 @@
       font-size: 40px;
     }
     span{
-      color: $primary-color;
+      color: $primary;
     }
   }
   &-form{
@@ -32,7 +32,7 @@
 .contact-form-generator {
   margin-top: 20px;
     a{
-    color: $text-color-dark;
+    color: $text-color;
     font-size: 13px;
     text-transform: uppercase;
     margin-bottom: 50px;

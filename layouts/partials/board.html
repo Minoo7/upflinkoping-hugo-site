@@ -1,23 +1,24 @@
 {{ if .enable }}
-  <section class="site-team">
+  <section class="site-board text-bg-white">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="section-title">
             <h2>
-              Board of {{ .year }}
+              Board of
+              {{ .year }}
             </h2>
           </div>
         </div>
       </div>
-      
+
       <div class="row justify-content-lg-start justify-content-md-center">
         <div class="col-auto">
-          <select class="form-select form-select-lg mb-5" id="board-select" onchange="javascript:handleSelect(this)" aria-label="Default select example">
+          <select class="form-select form-select-lg mb-5 text-secondary" id="board-select" onchange="javascript:handleSelect(this)" aria-label="Default select example">
             <option value="2022">2022</option>
-            {{/*  <option value="2019">2019</option>  */}}
-            {{/*  <option value="2018">2018</option>  */}}
-            {{/*  <option value="2017">2017</option>  */}}
+            {{/* <option value="2019">2019</option> */}}
+            {{/* <option value="2018">2018</option> */}}
+            {{/* <option value="2017">2017</option> */}}
           </select>
           <script>
             document.getElementById("board-select").value = "{{ .year }}";
@@ -28,28 +29,27 @@
           </script>
         </div>
       </div>
-        <div class="row">
-          {{ $images_path := .images_path }}
-          {{ range .members }}
+      <div class="row">
+        {{ $images_path := .images_path }}
+        {{ range .members }}
           <div class="col-lg-4 col-md-6">
-            <div id="test" class="site-team-member">
-              <div class="site-team-member-image">
-                <img src='{{ .image | printf "%s%s" $images_path | absURL }}' width="100px" height="100px" alt="team-member">
+            <div id="test" class="site-board-member">
+              <div class="site-board-member-image">
+                <img src="{{ .image | printf "%s%s" $images_path | absURL }}" width="100px" height="100px" alt="team-member" />
               </div>
               <h5></h5>
-              <div class="site-team-member-content">
+              <div class="site-board-member-content">
                 <h3>{{ title .name }}</h3>
                 <p>{{ title .designation }}</p>
-                <ul class="site-team-member-social">
-                  {{ range .socials }}
-                    <li><a href="{{ .link | absURL }}"><i class="fa fa-{{ .icon }}"></i></a></li>
-                  {{ end }}
-                </ul>
+                <a href="{{ .linkedin | absURL }}">
+                  <span>
+                    {{ partial "svg" "fa fab-linkedin" }}
+                  </span>
+                </a>
               </div>
             </div>
           </div>
-          {{ end }}
-        </div>
+        {{ end }}
       </div>
     </div>
   </section>

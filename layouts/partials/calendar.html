@@ -1,41 +1,41 @@
-{{ $script := resources.Get "js/calendar.js" | minify }}
-<script src="{{ $script.Permalink }}"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var calendarEl = document.getElementById("calendar");
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      // themeSystem: "bootstrap5",
-      headerToolbar: {
-        left: "prev,next today",
-        center: "title",
-        right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
-      },
-      navLinks: true, // can click day/week names to navigate views
-      nowIndicator: true,
-      weekNumbers: true,
-      weekNumberCalculation: "ISO",
-      selectable: true,
-      dayMaxEvents: true, // allow "more" link when too many events
-      // showNonCurrentDates: false,
-
-      // Colors
-      eventColor: "#FDCA19",
-      eventTextColor: '#00113E',
-      //eventBackgroundColor: '#FDCA19',
-
-      googleCalendarApiKey: "AIzaSyBMd3BURM5NWtH8abjmfJzw4blVbmKh4uc",
-
-      //events: 'en.usa#holiday@group.v.calendar.google.com',
-      events: "c_jiar5rc0dak68r1mvjibn4ho9s@group.calendar.google.com",
-    });
-    calendar.render();
-  });
-</script>
-
 {{ with .Site.Data.calendar }}
   {{ if .enable }}
-    <div class="site-calendar">
+    {{ "<!-- Fullcalendar.io-->" | safeHTML }}
+
+    {{ $script := resources.Get "js/calendar.js" | minify }}
+    <script src="{{ $script.Permalink }}"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          // themeSystem: "bootstrap5",
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+          },
+          navLinks: true, // can click day/week names to navigate views
+          nowIndicator: true,
+          weekNumbers: true,
+          weekNumberCalculation: "ISO",
+          selectable: true,
+          dayMaxEvents: true, // allow "more" link when too many events
+          // showNonCurrentDates: false,
+
+          // Colors
+          //eventColor: "#FDCA19",
+          //eventTextColor: "#00113E",
+          //eventBackgroundColor: '#FDCA19',
+
+          googleCalendarApiKey: "AIzaSyBMd3BURM5NWtH8abjmfJzw4blVbmKh4uc",
+          events: "c_jiar5rc0dak68r1mvjibn4ho9s@group.calendar.google.com",
+        });
+        calendar.render();
+      });
+    </script>
+
+    <section class="site-calendar text-bg-white">
       <div class="container-lg">
         <div class="row">
           <div class="col-12">
@@ -48,6 +48,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   {{ end }}
 {{ end }}

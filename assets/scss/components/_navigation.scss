@@ -19,7 +19,7 @@
   }
   .navbar-brand {
     svg {
-      color: $black;
+      // color: $black;
       width: 36.25px; // height 40 px
       max-width: 78px;
     }
@@ -30,24 +30,16 @@
     @include desktop {
       justify-content: center;
     }
-    .item {
-      color: $text-color-dark;
-      margin-right: 20px;
-      //padding: 8px 11px;
-      /*&:last-child {
-        span {
-          filter: invert(0%) grayscale(100%) brightness(165%);
-          &:hover {
-            filter: invert(0%) grayscale(100%) brightness(75%);
-          }
-        }
-      }*/
-      .icon {
+    .nav-item {
+      color: $text-color;
+      // margin-right: 20px;
+      svg {
         display: inline-block;
-        top: 0.15rem;
+        // top: 0.15rem;
         position: relative;
         transition: all 0.3s $site-ease;
         height: 30px;
+        fill: $secondary;
         &:hover {
           fill: $upf-yellow;
         }
@@ -60,19 +52,24 @@
     background-color: black;
     margin: 0 10px;
   }
+  .navbar-nav.main .nav-item:last-child {
+    margin-left: 15px;
+  }
   .nav-item {
     @include desktop {
       text-align: center;
     }
     .nav-link {
       font-family: $secondary-font;
-      color: $text-color-dark;
       transition: all 0.3s ease;
       padding: 15px 18px;
       position: relative;
-    }
-    &:last-child {
-      margin-left: 15px;
+      color: $black;
+      font-weight: 500;
+
+      &:hover, &.active {
+        color: $primary;
+      }
     }
   }
   .navbar-toggler {
@@ -82,7 +79,7 @@
       height: 2px;
       width: 25px;
       transition: all 0.2s;
-      background: $primary-color;
+      background: $primary;
       display: block;
       &:not(:last-child) {
         margin-bottom: 5px;

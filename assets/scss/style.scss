@@ -1,9 +1,10 @@
-// @import "bootstrap";
-
+@import "variables";
 
 @import "fonts";
 
-@import "variables";
+// @import "bootstrap/bootstrap";
+
+@import "bootstrap";
 
 @import "typography";
 
@@ -26,22 +27,13 @@
 
 @import "components/blog";
 
-@import "components/team-overview";
-
 @import "components/cta";
 
-@import "components/about";
-
-@import "components/expertise";
 
 @import "components/calendar";
 
-@import "components/client";
-
 // @import "components/team";
 @import "components/board";
-
-@import "components/contact";
 
 @import "components/footer";
 
@@ -58,3 +50,9 @@
 @import "components/post";
 
 @import "components/error";
+
+@import "components/portfolio";
+
+@import "section";
+
+@import "components/card";

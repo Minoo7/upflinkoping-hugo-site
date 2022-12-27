@@ -3,7 +3,9 @@
 body {
   font-family: $primary-font;
   font-size: 16px;
-  color: $text-color;
+  background: $body-color;
+  // color: $text-color;
+  padding-top: 95px;
 }
 
 h1,
@@ -14,12 +16,27 @@ h5,
 h6 {
   font-family: $secondary-font;
   font-weight: 600;
-  color: $text-color-dark;
+  // color: $text-color-dark;
+}
+
+.text-bg-white p {
+  color: $text-color;
 }
 
 p {
+  font-size: 20px;
+  // color: $text-color;
+}
+
+.text-bg-white {
+  p {
+    color: $text-color;
+  }
+}
+
+small {
   font-size: 16px;
-  color: $text-color;
+  // color: $text-color-sub;
 }
 
 h1 {
@@ -39,10 +56,11 @@ h4 {
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 h6 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
 }

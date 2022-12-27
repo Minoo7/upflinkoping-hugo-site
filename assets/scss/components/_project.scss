@@ -1,9 +1,6 @@
 .site-project {
-  padding: 120px 0 70px;
+  padding: 120px 0;
   overflow: hidden;
-  .row {
-    overflow: hidden;
-  }
 
   article:nth-of-type(3n + 1) &-item {
     color: $white;
@@ -21,17 +18,20 @@
   }
 
   &-item {
-    color: $black;
-    background-color: $upf-yellow;
-
     position: relative;
     margin-bottom: 30px;
     transition: all 0.3s ease-in;
-
-    %content {
-      //display: none;
-      padding: 45px 50px;
+    &-thumb {
+      img {
+        width: 100%;
+      }
+    }
+    &-content {
+      position: absolute;
       background: $gray;
+      width: 100%;
+      padding: 45px 50px;
+      bottom: 0;
       transition: all 0.3s $site-ease;
       @include tablet {
         padding: 30px;
@@ -39,7 +39,7 @@
       }
       span {
         font-family: $secondary-font;
-        color: $secondary-color;
+        // color: $primary;
         display: block;
         margin-bottom: 10px;
       }
@@ -50,7 +50,7 @@
           transition: 0.3s ease;
           &:hover {
             text-decoration: none;
-            color: $primary-color;
+            color: $primary;
           }
         }
       }
@@ -69,60 +69,12 @@
         }
       }
     }
-
-    %thumb {
-      overflow: hidden;
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-      .svg-parent {
-        width: 100%;
-        svg {
-          position: relative;
-          width: 100%;
-          fill: currentColor;
-          @include mobile {
-            scale: 0.4 !important;
-          }
-          scale: 0.6;
-        }
-      }
-    }
-
-    &--small {
-      @extend .site-project-item;
-      // height: 300px;
-      // overflow: hidden;
-
-      &-content {
-        @extend %content;
-      }
-
-      &-thumb {
-        @extend %thumb;
-      }
-    }
-
-    &-thumb {
-      @extend %thumb;
-
-      img {
-        // aspect-ratio: 0.94 /  1;
-      }
-    }
-    &-content {
-      @extend %content;
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-    }
     &:hover {
       box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.01),
         0px 30px 45px 0px rgba(0, 0, 0, 0.02),
         0px 30px 45px 0px rgba(0, 0, 0, 0.03),
         0px 30px 45px 0px rgba(0, 0, 0, 0.04);
-      %content {
+      .site-project-item-content {
         a {
           transform: translateY(0);
           opacity: 1;
@@ -138,20 +90,20 @@
     font-family: $secondary-font;
     font-size: 18px;
     font-weight: 500;
-    color: $primary-color;
+    color: $primary;
     &::before {
       content: "";
       position: absolute;
       height: 2px;
       width: 100%;
-      background: $primary-color;
+      background: $primary;
       bottom: -2px;
       transition: transform 0.3s $site-ease;
       transform-origin: right;
       transform: scaleX(0);
     }
     &:hover {
-      color: $primary-color;
+      color: $primary;
       text-decoration: none;
       &::before {
         transform: scaleX(1);
@@ -160,7 +112,6 @@
     }
   }
   &-header {
-    // display: none;
     padding: 170px 0 100px;
     background: $gray;
     @include tablet {
@@ -170,7 +121,7 @@
       h1 {
         font-size: 55px;
         span {
-          color: $secondary-color;
+          color: $primary;
         }
         @include tablet {
           font-size: 40px;
@@ -224,7 +175,7 @@
         }
         &.active {
           .page-link {
-            background-color: $primary-color;
+            background-color: $primary;
             color: $white;
           }
         }
@@ -237,7 +188,7 @@
   }
   &-single {
     &-section {
-      padding: 150px 0 100px;
+      padding: 250px 0 100px;
       @include tablet {
         padding: 100px 0;
       }

@@ -1,7 +1,5 @@
 .site-footer {
-  background: $secondary-color;
   padding: 100px 0;
-  @include text-color($white);
   &-logo {
     display: block;
     width: 200px;
@@ -37,7 +35,7 @@
           transition: all 0.3s $site-ease;
           display: block;
           &:hover {
-            color: black;
+            // color: black;
           }
         }
         &:not(:last-child) {
@@ -66,7 +64,7 @@
       text-align: center;
     }
     a {
-      color: $text-color-dark;
+      // color: $text-color;
       transition: all 0.3s ease;
       @include tablet {
         font-size: 20px;
@@ -74,15 +72,6 @@
       @include desktop {
         margin-bottom: 70px;
       }
-    }
-  }
-}
-
-.test {
-  span {
-    filter: invert(0%) grayscale(100%) brightness(165%);
-    &:hover {
-      filter: invert(0%) grayscale(100%) brightness(75%);
     }
   }
 }

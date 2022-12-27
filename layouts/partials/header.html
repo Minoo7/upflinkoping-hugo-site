@@ -3,28 +3,27 @@
     <a class="navbar-brand m-0 p-0" href="{{ .Site.BaseURL }}">
       {{ partial "svg" (print .Site.Params.Logo) }}
     </a>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sitenavbar, #navbarsocials">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      {{/* <span class="navbar-toggler-icon"></span> */}}
-    </button>
-    <ul class="collapse navbar-collapse navbar-nav form-inline navbar-social w-100" id="navbarsocials">
-      {{ range .Site.Menus.social }}
-        <li>
-          <a href="{{ .URL | absURL }}" class="item">
-            {{ partial "svg" (print .Pre) }}
-          </a>
-        </li>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sitenavbar">
+      {{ range seq 3 }}
+        <span class="icon-bar"></span>
       {{ end }}
-    </ul>
-
-    <hr class="line-vertical d-none d-lg-block" />
+    </button>
 
     <!--Collapse-->
     <div class="collapse navbar-collapse" id="sitenavbar">
-      <ul class="navbar-nav ml-auto main-nav">
-        {{- $menu := (.Site.Menus.nav) -}}
+      <ul class="navbar-nav form-inline navbar-social ms-auto">
+        {{ range .Site.Menus.social }}
+          <li class="nav-item">
+            <a href="{{ .URL }}" class="nav-link px-3">
+              {{ partial "svg" (print .Pre) }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      <hr class="line-vertical ms-4 d-none d-lg-block" />
+      <ul class="navbar-nav main">
+        {{- $currentPage := . -}}
+        {{- $menu := (.Site.Menus.main) -}}
         {{- $len := (len $menu) -}}
         {{ range $index, $element := $menu }}
           {{- if eq (add $index 1) $len -}}
@@ -39,7 +38,7 @@
             </li>
           {{ else }}
             <li class="nav-item">
-              <a class="nav-link" href="{{ .URL | absURL }}"> {{ .Name }} </a>
+              <a class="nav-link {{ if (eq (strings.TrimRight "/" $currentPage.RelPermalink) .URL) }}active{{ end }}" href="{{ .URL | absURL }}"> {{ .Name }} </a>
             </li>
           {{- end -}}
         {{- end -}}

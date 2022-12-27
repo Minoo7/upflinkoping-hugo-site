@@ -1,5 +1,5 @@
 enable  : true
 title   : "The Board"
-board : "images/team-overview/boardphoto.jpg"
+board : "/images/board-overview/boardphoto.jpg"
 subtitle: "MORE ABOUT US"
 primary_button_url: board/2022

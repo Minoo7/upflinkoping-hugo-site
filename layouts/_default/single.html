@@ -1,37 +1,26 @@
 {{ define "main" }}
-  {{/* {{ if .Params.feature_image }} */}}
-  {{/* <div class="site-project-single-image"> */}}
-  {{/* <img class="feature-image" src="{{ .Params.feature_image | absURL }}" alt="blog-feature-image" /> */}}
-  {{/* </div> */}}
-  {{/* {{ end }} */}}
-  <section class="site-blog">
+  <section class="site-blog details text-bg-white">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <article class="site-blog-details">
+          <article class="site-blog-post">
             {{- partial "breadcrumb.html" . -}}
             <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
-            <h2 class="title">{{ title .Title }}</h2>
-            {{ .Scratch.Set "showInsta" false }}
-
-            {{ "<!-- Slideshow -->" | safeHTML }}
+            <h2 class="post-title">{{ title .Title | safeHTML }}</h2>
+            {{/* <img class="feature-image" src="{{ .Params.image | absURL }}" alt="blog-feature-image"> */}}
             {{ if .Params.gallery }}
               {{ partial "carousel.html" (dict "context" . "images" .Params.gallery "duration" "7000") }}
             {{ else }}
-              {{ .Scratch.Set "showInsta" true }}
+              {{ .Scratch.Set "showInstagram" true }}
             {{ end }}
-
-
-            <div class="content">
-              {{ .Content }}
-            </div>
+            {{ .Content }}
           </article>
         </div>
       </div>
     </div>
   </section>
 
-  {{ if (.Scratch.Get "showInsta") }}
+  {{ if (.Scratch.Get "showInstagram") }}
     {{ partial "instagram" . }}
   {{ end }}
 

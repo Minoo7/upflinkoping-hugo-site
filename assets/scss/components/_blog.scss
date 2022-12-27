@@ -1,22 +1,17 @@
 .site {
-  &-insta {
-    @extend .site-project;
-    background-color: $primary-color;
-  }
-
   &-blog {
     @extend .site-project;
     @include mobile {
       padding: 70px 0;
     }
     &.details {
-      padding: 150px 0 80px;
+      padding: 50px 0; //150px 0 80px;
       @include tablet {
-        padding: 100px 0 60px;
+        //padding: //100px 0 60px;
       }
     }
     &-header {
-      padding: 150px 0 0;
+      padding: 50px 0 0;
       @include mobile {
         padding: 100px 0 0;
       }
@@ -37,7 +32,7 @@
     &-pagination {
       @extend .site-project-pagination;
     }
-    &-post {
+    &-preview {
       @extend .site-project-item;
       &-thumb {
         @extend .site-project-item-thumb;
@@ -57,7 +52,7 @@
           }
         }
         a.read-more {
-          color: $primary-color;
+          color: $primary;
           letter-spacing: 2px;
           @include mobile {
             transform: translateY(22px);
@@ -65,12 +60,12 @@
         }
       }
     }
-    &-details {
+    &-post {
       img {
         max-width: 100%;
         margin-bottom: 20px;
       }
-      .title {
+      .post-title {
         font-size: 40px;
       }
       .feature-image {
@@ -93,12 +88,14 @@
         margin-top: 10px;
         display: block;
       }
-      .content {
-        p {
-          color: #343a40;
-          font-size: large;
-        }
-      }
     }
+  }
+}
+
+
+.breadcrumb-item a {
+  color: currentColor;
+  &:hover {
+    color: $primary;
   }
 }

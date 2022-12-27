@@ -1,17 +1,17 @@
 {{ with .Site.Data.description }}
   {{ if .enable }}
-    <section class="site-description" id="counter">
+    <section class="site-description text-bg-primary" id="counter">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="section-title">
-              <h2 class="text-white">{{ .heading }}</h2>
+              <h2>{{ .heading }}</h2>
             </div>
+            <h5 class="text-white text-lg-left text-center">{{ .description }}</h5>
           </div>
-          <h5 class="text-white text-center">{{ .description }}</h5>
         </div>
         <div class="d-grid mt-5 mx-auto">
-          <a href="{{ .url | absURL }}" class="btn btn-primary btn-block fs-5 text-white">
+          <a href="{{ .url | absURL }}" class="btn btn-secondary btn-lg btn-block">
             <span class="btn-area">
               <span data-text="{{ .subtitle }}">
                 {{ .subtitle }}

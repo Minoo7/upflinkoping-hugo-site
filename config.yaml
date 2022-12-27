@@ -31,7 +31,7 @@ menu:
       pre: images/fontawesome/cardskipper
       weight: 4
 
-  nav:
+  main:
     - name: Home
       url: ""
       weight: 1
@@ -41,15 +41,15 @@ menu:
     #weight: 2
 
     - name: Board
-      url: board/2022
+      url: /board/2022
       weight: 3
 
     - name: Calendar
-      url: calendar
+      url: /calendar
       weight: 4
 
     - name: Portfolio
-      url: portfolio
+      url: /portfolio
       weight: 5
 
     - name: Learn More
@@ -63,7 +63,7 @@ params:
   logo_footer: "images/upf/upf-logo"
   dateFormat: 26 FEB 1994
   # Site Params
-  description: Roxo Hugo themes | Design Agency Template by StaticMania
+  # description: Roxo Hugo themes | Design Agency Template by StaticMania
   author: StaticMania
   # Google Analitycs
   googleAnalitycsID: Your ID
@@ -180,8 +180,6 @@ module:
     - source: _huge
       target: assets/_huge
   imports:
-    - path: github.com/theNewDynamic/hugo-module-tnd-styles
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
-    - path: github.com/shoginn/wowchemy-block-instagram-behold
     - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
     #- path: github.com/theNewDynamic/huge

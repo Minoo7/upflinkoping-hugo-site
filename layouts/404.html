@@ -1,14 +1,13 @@
 {{ define "main" }}
   {{ with .Site.Params.error }}
-    <div class="site-error">
+    <section class="text-bg-white">
       <div class="container">
         <div class="row">
-          <div class="col mx-auto text-center">
-            <h1>
-              {{ .code }}
-              <br />
-              <small class="text-muted">{{ .text }}</small>
-            </h1>
+          <div class="col-12 text-center">
+            <div class="section-title mb-5">
+              <h1>{{ .code }}</h1>
+              <p>{{ .text }}</p>
+            </div>
             <a href="{{ .button.url | absURL }}" class="btn btn-primary">
               <span class="btn-area">
                 <span data-text="{{ .button.text }}">
@@ -19,6 +18,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   {{ end }}
 {{ end }}

@@ -2,37 +2,13 @@
 //   scroll-behavior: smooth;
 // }
 
-body {
-  background: $body-color;
-}
-
-.section-title {
-  margin-bottom: 70px;
-  @include desktop {
-    text-align: center;
-  }
-  h2 {
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    @include desktop {
-      font-size: 40px;
-    }
-  }
-  p {
-    font-size: 20px;
-    font-weight: 300;
-  }
-}
-
 .form-control {
   background: transparent;
   border-radius: 0;
   margin-bottom: 30px;
   padding: 0 0 10px 0;
   border-width: 0 0 1px 0;
-  border-color: $primary-color;
+  border-color: $primary;
   font-weight: 300;
   letter-spacing: 1px;
   -webkit-appearance: none;
@@ -82,6 +58,13 @@ svg {
   fill: currentColor;
 }
 
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
 ul.unstyled {
   //list-unstyled w-100 m-0
   // @extend .list-unstyled;
@@ -96,10 +79,77 @@ ul.unstyled {
   }
 }
 
-.omg {
-  // display: flex;
-  // width: fit-content;
-  svg {
-    // vertical-align: text-bottom;
+/*.subtitle {
+  // color: $text-color-sub;
+  // font-size: 48px;
+}*/
+
+.card-img-overlay.center-btn {
+  @extend .card-img-overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.hover-cont {
+  transition: all 0.3s $site-ease;
+  position: relative;
+  .hover-item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 50px;
+    transition: all 0.3s $site-ease;
+    transform: translateY(-5px);
+    @include tablet {
+      padding: 30px;
+      padding-bottom: 75px;
+    }
+    span {
+      font-family: $secondary-font;
+      color: $primary;
+      display: block;
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin-bottom: 0;
+      a {
+        color: $text-color-dark;
+        transition: 0.3s ease;
+        &:hover {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+    }
+    a.read-more {
+      position: absolute;
+      bottom: 40px;
+      display: block;
+      width: 100%;
+      color: $text-color-sub;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s $site-ease;
+      @include tablet {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
+  &:hover {
+    box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.01),
+      0px 30px 45px 0px rgba(0, 0, 0, 0.02),
+      0px 30px 45px 0px rgba(0, 0, 0, 0.03),
+      0px 30px 45px 0px rgba(0, 0, 0, 0.04);
+    transform: translateY(-35px);
+    padding-bottom: 75px;
+    a {
+      transform: translateY(0);
+      opacity: 1 !important;
+    }
+  }
+  background-color: red;
 }

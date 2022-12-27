@@ -1,14 +1,65 @@
-//$navbar-toggler-focus-width: 0;
+/* Remove navbar-toggler border */
+$navbar-toggler-focus-width: 0;
+$navbar-light-toggler-border-color: transparent;
 
+// $primary: $upf-yellow;
+// $link-color: currentColor;
+$link-decoration: none;
+$link-hover-decoration: underline;
 
-@import "../other/bootstrap/scss/bootstrap";
+$primary: $upf-yellow;
+$secondary: $black;
 
-small {
-    font-weight: 400;
+// buttons
+$btn-border-width: 0;
+$btn-border-radius: none;
+$btn-border-radius-lg: none;
+$btn-border-radius-sm: none;
+$btn-padding-y: 20px;
+$btn-padding-x: 45px;
+$btn-padding-y-lg: $btn-padding-y;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-focus-box-shadow: none;
+
+$min-contrast-ratio: 1.5;
+$card-border-width: none;
+$card-border-radius: 0;
+
+$text-muted: $text-color-sub;
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+// Create your own map
+$custom-colors: (
+  "white": $white,
+  "gray": $gray,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Adding level 6 to spacers
+$custom-spacer: (
+  6: $spacer * 4.5,
+);
+
+$spacers: map-merge($spacers, $custom-spacer);
+
+$btn-font-weight: $font-weight-semibold;
+
+@import "bootstrap/bootstrap";
+
+.bg-lg-primary {
+  @include media-breakpoint-up(lg) {
+    color: $black !important;
+    background-color: $primary !important;
+  }
 }
 
-/*.nav-link {
-    &:hover {
-        color: white;
-    }
-}*/
+.bg-lg-secondary {
+  @include media-breakpoint-up(lg) {
+    color: $white !important;
+    background-color: $secondary !important;
+  }
+}

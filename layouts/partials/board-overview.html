@@ -1,0 +1,24 @@
+{{ with .Site.Data.board_overview }}
+  {{ if .enable }}
+    <section class="text-bg-secondary">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-white">{{ .title }}</h2>
+        </div>
+        <div class="card border-0">
+          {{ $image := (resources.Get .board).Resize "1920x" }}
+          <img src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo" />
+          <div class="card-img-overlay center-btn">
+            <a href="{{ .primary_button_url | absURL }}" class="btn btn-lg btn-primary mb-4 mb-lg-5">
+              <span class="btn-area">
+                <span data-text="{{ .subtitle }}">
+                  {{ .subtitle }}
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

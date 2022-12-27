@@ -1,5 +1,5 @@
 {{ if .enable }}
-  <section class="site-team">
+  <section class="site-board">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -21,14 +21,14 @@
         </div>
         {{ range .members }}
         <div class="col-lg-4 col-md-6">
-          <div id="test" class="site-team-member">
-            <div class="site-team-member-image">
+          <div id="test" class="site-board-member">
+            <div class="site-board-member-image">
               <img src="{{ .image | absURL }}" alt="team-member">
             </div>
-            <div class="site-team-member-content">
+            <div class="site-board-member-content">
               <h3>{{ .name }}</h3>
               <p>{{ .designation }}</p>
-              <ul class="site-team-member-social">
+              <ul class="site-board-member-social">
                 <li><a href="{{ .medium | absURL }}"><i class="fa fa-medium"></i></a></li>
                 <li><a href="{{ .linkedin | absURL }}"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="{{ .instagram | absURL }}"><i class="fa fa-instagram"></i></a></li>

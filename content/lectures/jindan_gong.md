@@ -1,14 +1,11 @@
 ---
-title: "Fair and sustainable transporation"
+title: "Fair and sustainable transportation"
 date: 2022-11-18
 category: ["Jindan Gong, 2022"]
 image: "images/portfolio/lectures/jindan_gong/cover.png"
 gallery: "images/portfolio/lectures/jindan_gong/gallery/*"
 
 ---
-
-# Optional Content below feed and button
-Irure commodo nisi cillum fugiat sunt aliqua tempor voluptate sit reprehenderit cupidatat commodo.
 
 Transportation is of central importance for us; We need it, for example, for moving food and other items within and between countries, visiting friends and family as well as going on vacation and learning about new cultures. To reach Sweden's ambitious target of decreasing emissions from the transportation sector by 70% by 2030, technology is fast advancing through efficiency improvements, electrification, and the development of new renewable fuels. The question is; how should instruments for a transformation of the transportation system be designed to be perceived as fair and thus gain greater acceptance? Many of the instruments currently under consideration to reduce reliance on fossil fuels (for example, increased fossil fuel taxes, investments in public transportation, and bike lanes) have differing effects on urban and rural residents.
 

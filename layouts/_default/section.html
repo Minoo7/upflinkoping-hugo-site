@@ -1,40 +1,47 @@
 {{ define "main" }}
-  <section class="site-project-single-section">
+  <section class="site-blog-header text-bg-white">
     <div class="container">
-      <div class="row">
-        <div class="col-l2">
-          <div class="site-project-single">
-            <h1>{{ .Title }}</h1>
-            <div class="site-project-single-description">
-              {{ .Content }}
-            </div>
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1>{{ .Title }}</h1>
+          <p>
+            {{ .Content }}
+          </p>
         </div>
-      </div>
-      <div class="row">
-        {{ range (where $.Site.RegularPages "Type" .Section) }}
-          <div class="col-lg-6 col-md-10 mx-auto">
-            <div class="site-project-item--small">
-              <div class="site-project-item--small-thumb">
-                {{/* <img src="{{ .Params.Image | absURL }}" width="100%" alt="project-thumb" /> */}}
-                <img src="{{ ((resources.GetMatch .Params.Image).Crop "960x960").Permalink }}" width="100%" alt="" />
-              </div>
-              <div class="site-project-item--small-content">
-                <span>{{ delimit .Params.category ", " }}</span>
-                <h3>{{ title .Title }}</h3>
-                <a href="{{ .Permalink }}" class="read-more">view project</a>
-              </div>
-            </div>
-          </div>
-        {{ end }}
       </div>
     </div>
   </section>
 
-  <div class="col-12">
-    <div class="site-project-pagination">
-      {{ template "_internal/pagination.html" . }}
+  <section class="site-blog">
+    <div class="container">
+      <div class="row lnda">
+        {{- $currentPage := . -}}
+        {{ range (.Paginator 4).Pages }}
+          <article class="col-lg-6 col-md-10 mx-auto">
+            <div class="card-container details {{ if $currentPage.Params.large_fix }} large_fix {{ end }}">
+              <div class="card">
+                <div class="card-img-top">
+                  {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions "960x960" ) -}}
+                  {{- $image_res := (resources.GetMatch .Params.Image) -}}
+                  {{- $image := (cond (isset .Params "fit") ($image_res.Fit $dimens) ($image_res.Fill $dimens) ) -}}
+                  <img src="{{ $image.Permalink }}" width="100%" alt="" />
+                </div>
+                <div class="card-body">
+                  <span class="card-text">{{ .PublishDate.Format "January 2, 2006" }}</span>
+                  <h3 class="card-title"><a href="{{ .Permalink }}" class="card-link">{{ upper .Title }}</a></h3>
+                  <small class="card-text">{{ .Summary | truncate 120 }}</small>
+                  <a href="{{ .Permalink }}" class="card-link read-more text-primary">read more</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        {{ end }}
+        <div class="col-12">
+          <div class="site-blog-pagination">
+            {{ template "_internal/pagination.html" . }}
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  {{ partial "call-to-action.html" . }}
+  </section>
 {{ end }}

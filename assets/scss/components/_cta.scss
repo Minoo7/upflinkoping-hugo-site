@@ -1,44 +1,44 @@
-.site-cta{
+.site-cta {
   padding: 130px 0;
   background-size: cover;
   background-position: center center;
-  @include desktop{
+  @include desktop {
     padding: 100px 0;
   }
-  &-title{
+  &-title {
     font-size: 70px;
     font-weight: 700;
     letter-spacing: 10px;
     margin-bottom: 60px;
-    @include desktop{
+    @include desktop {
       letter-spacing: 5px;
     }
-    @include desktop-lg{
+    @include desktop-lg {
       font-size: 50px;
       margin-bottom: 40px;
     }
-    @include mobile{
+    @include mobile {
       font-size: 40px;
       letter-spacing: 1;
     }
   }
-  &-buttons{
+  &-buttons {
     margin: 0;
     padding: 0;
-    li{
+    li {
       display: inline-block;
-      @include mobile{
+      @include mobile {
         display: block;
       }
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 40px;
-        @include mobile{
+        @include mobile {
           margin-right: 0;
           margin-bottom: 20px;
         }
       }
-      .btn{
-        @include mobile{
+      .btn {
+        @include mobile {
           display: block;
           width: 90%;
           margin: 0 auto;

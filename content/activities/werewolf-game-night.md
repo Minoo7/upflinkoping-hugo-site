@@ -1,6 +1,6 @@
 ---
 title: "Werewolf Game Night"
-date: 2022-11-21
+date: 2022-10-27
 category: ["2022"]
 image: "images/portfolio/activities/werewolf_game_night/cover2.jpg"
 gallery: "images/portfolio/activities/werewolf_game_night/gallery/*"
