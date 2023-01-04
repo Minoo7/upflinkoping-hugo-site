@@ -66,6 +66,7 @@
         margin-bottom: 20px;
       }
       .post-title {
+        @extend .mt-4;
         font-size: 40px;
       }
       .feature-image {
@@ -98,4 +99,11 @@
   &:hover {
     color: $primary;
   }
+}
+
+.info-more {
+  width: 100%;
+  background-color: red;
+  // height: 564px;
+  height: 100%;
 }

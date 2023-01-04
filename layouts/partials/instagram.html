@@ -1,13 +1,17 @@
 {{ with .Site.Data.instagram }}
-  <section class="site-insta text-bg-primary">
+  <section class="text-bg-secondary">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <div class="section-title">
             <h2>{{ .title }}</h2>
           </div>
-          {{ partial "instagram-behold" .behold_id }}
-          <a href="https://www.instagram.com/upflinkoping" class="btn btn-lg btn-icon btn-secondary mt-5">
+          <!-- LightWidget WIDGET -->
+          <!-- LightWidget WIDGET -->
+          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+          <iframe src="//lightwidget.com/widgets/1c9217d5e9555ac391def346e6ccc413.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+          {{/* {{ partial "instagram-behold" .behold_id }} */}}
+          <a href="https://www.instagram.com/upflinkoping" class="btn btn-lg btn-icon btn-primary mt-5">
             <span class="me-2">{{ partial "svg" "fab fa-instagram" }}</span>
             <span class="btn-area d-inline-block">
               <span data-text="instagram.com">

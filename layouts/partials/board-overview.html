@@ -5,7 +5,7 @@
         <div class="section-title">
           <h2 class="text-white">{{ .title }}</h2>
         </div>
-        <div class="card border-0">
+        <div class="card">
           {{ $image := (resources.Get .board).Resize "1920x" }}
           <img src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo" />
           <div class="card-img-overlay center-btn">

@@ -4,6 +4,7 @@ date: 2022-11-09
 category: ["2022"]
 fit: true
 image: "images/portfolio/activities/bowling/cover.jpg"
+facebook_id: 1244224899693094
 ---
 Zip, Zap and Zoom! You have been targeted to participate in a laser tag event at O'Learys. The game is domination, so gather your friends and join us for a great time! 🥳
 

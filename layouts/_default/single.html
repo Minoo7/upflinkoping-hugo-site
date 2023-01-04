@@ -1,18 +1,28 @@
 {{ define "main" }}
-  <section class="site-blog details text-bg-white">
+  <section class="text-bg-white">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <article class="site-blog-post">
-            {{- partial "breadcrumb.html" . -}}
-            <p>{{ .PublishDate.Format "January 2, 2006" }}</p>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <article class="post">
+            <span class="fs-5">
+              {{- partial "breadcrumb.html" . -}}
+            </span>
+            <p class="mt-4">
+              {{ .PublishDate.Format "January 2, 2006" }}
+              {{ with .Params.author }}<span>by {{ . }}</span>{{ end }}
+            </p>
             <h2 class="post-title">{{ title .Title | safeHTML }}</h2>
             {{/* <img class="feature-image" src="{{ .Params.image | absURL }}" alt="blog-feature-image"> */}}
-            {{ if .Params.gallery }}
-              {{ partial "carousel.html" (dict "context" . "images" .Params.gallery "duration" "7000") }}
-            {{ else }}
-              {{ .Scratch.Set "showInstagram" true }}
+            {{ $showInstagram := true }}
+            {{ with .Params.gallery }}
+              {{ partial "carousel.html" (dict "images" . "duration" "7000") }}
+              {{ $showInstagram = false }}
             {{ end }}
+
+            {{ with .Params.facebook_id }}
+              {{ partial "facebook_event.html" . }}
+            {{ end }}
+
             {{ .Content }}
           </article>
         </div>
@@ -20,7 +30,7 @@
     </div>
   </section>
 
-  {{ if (.Scratch.Get "showInstagram") }}
+  {{ if $showInstagram }}
     {{ partial "instagram" . }}
   {{ end }}
 

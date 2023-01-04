@@ -1,139 +1,137 @@
-.card-container {
-  margin-bottom: 30px;
-  transition: all 0.3s ease-in;
-  &.details {
-    &.large_fix {
-      .card-body {
-        $large-size: 256px;
-        height: $large-size;
-        @include mobile {
-          height: unset;
-        }
-      }
-    }
-    .card-body {
-      @include mobile {
-        padding: 15px 25px 50px;
-      }
-      span {
-        font-size: 14px;
-      }
-      .card-title {
-        margin-bottom: 15px;
-        @include mobile {
-          font-size: 20px;
-        }
-      }
-      small {
-        color: $text-color-sub;
-      }
-      .read-more {
-        color: $primary;
-        letter-spacing: 2px;
-        @include mobile {
-          transform: translateY(22px);
-        }
-      }
-    }
+article {
+  &:last-of-type {
+    .card-container.insta-placeholder {
+      padding-bottom: 0 !important;
+    } 
   }
-  .card {
-    position: relative;
-    align-items: center;
-    transition: all 0.3s $site-ease;
+  .card-container {
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in;
+    &.details {
+      .card-body {
+        @include mobile {
+          padding: 15px 25px 50px;
+        }
+        span {
+          font-size: 14px;
+        }
+        .card-title {
+          margin-bottom: 15px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
 
-    &-img-top {
-      img {
-        width: 100%;
-      }
-      &--svg {
-        width: 75%;
-        svg {
-          margin: 0 auto;
-          fill: currentColor;
           @include mobile {
-            scale: 0.4 !important;
+            font-size: 20px;
           }
-          scale: 0.75;
-        }
-        a {
-          color: inherit;
-        }
-      }
-    }
-    &-body {
-      @extend .text-bg-gray;
-      position: absolute;
-      width: 100%;
-      padding: 45px 50px;
-      transition: all 0.3s $site-ease;
-      @include tablet {
-        padding: 30px;
-        padding-bottom: 75px;
-      }
-      span {
-        font-family: $secondary-font;
-        color: $primary;
-        display: block;
-        margin-bottom: 10px;
-      }
-      .card-title {
-        margin-bottom: 0;
-        .card-link {
-          color: $text-color-dark;
           transition: 0.3s ease;
           &:hover {
-            text-decoration: none;
             color: $primary;
           }
         }
-      }
-      .read-more {
-        position: absolute;
-        bottom: 40px;
-        display: block;
-        width: 100%;
-        color: $text-color-sub;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.3s $site-ease;
-        &:hover {
-          text-decoration: underline;
+        small {
+          color: $text-color-sub;
         }
+        .read-more {
+          color: $primary;
+          letter-spacing: 2px;
+          @include mobile {
+            transform: translateY(22px);
+          }
+        }
+      }
+    }
+    .card {
+      position: relative;
+      align-items: center;
+      transition: all 0.3s $site-ease;
+
+      &-img-top {
+        img {
+          width: 100%;
+        }
+        &--svg {
+          width: 75%;
+          svg {
+            margin: 0 auto;
+            fill: currentColor;
+            @include mobile {
+              scale: 0.4 !important;
+            }
+            scale: 0.75;
+          }
+          a {
+            color: inherit;
+          }
+        }
+      }
+      &-body {
+        @extend .text-bg-gray;
+        position: absolute;
+        width: 100%;
+        padding: 45px 50px;
+        transition: all 0.3s $site-ease;
         @include tablet {
+          padding: 30px;
+          padding-bottom: 75px;
+        }
+        span {
+          font-family: $secondary-font;
+          color: $primary;
+          display: block;
+          margin-bottom: 10px;
+        }
+        .card-title {
+          margin-bottom: 0;
+          .card-link {
+            color: $text-color-dark;
+            transition: 0.3s ease;
+            &:hover {
+              text-decoration: none;
+              color: $primary;
+            }
+          }
+        }
+        .read-more {
+          position: absolute;
+          bottom: 40px;
+          display: block;
+          width: 100%;
+          color: $text-color-sub;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.3s $site-ease;
+          &:hover {
+            text-decoration: underline;
+          }
+          @include tablet {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.01),
+        0px 30px 45px 0px rgba(0, 0, 0, 0.02),
+        0px 30px 45px 0px rgba(0, 0, 0, 0.03),
+        0px 30px 45px 0px rgba(0, 0, 0, 0.04);
+
+      .card-body {
+        a {
           transform: translateY(0);
           opacity: 1;
         }
+        padding-bottom: 75px;
       }
     }
   }
-  &:hover {
-    box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.01),
-      0px 30px 45px 0px rgba(0, 0, 0, 0.02),
-      0px 30px 45px 0px rgba(0, 0, 0, 0.03),
-      0px 30px 45px 0px rgba(0, 0, 0, 0.04);
 
-    &.large_fix {
-      .card-body {
-        height: 286px;
-        @include mobile {
-          height: unset;
-        }
-      }
+  .lnda {
+    // margin: 0 50px;
+    @include desktop-lg {
+      // border: 1px solid red;
+      // display: none;
     }
-    .card-body {
-      a {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      padding-bottom: 75px;
-    }
-  }
-}
-
-.lnda {
-  // margin: 0 50px;
-  @include desktop-lg {
-    // border: 1px solid red;
-    // display: none;
   }
 }

@@ -6,6 +6,9 @@ summarylength: 25
 register: &register "https://apply.cardskipper.se/hr3"
 linktree: &linktree "https://linktr.ee/upflinkoping"
 
+permalinks:
+  lectures: /:section/:year/:month/:title/:slug/
+
 # Site Menus
 menu:
   # Navbar Menus
@@ -70,21 +73,8 @@ params:
   # We're using formspree.io for form handling, paste your formspree url below
   fabform: "https://fabform.io/f/USAg2Jl"
 
-  # Contact Form
-  contactForm:
-    placeholder_first_name: First Name
-    placeholder_last_name: Last Name
-    placeholder_email: Email
-    placeholder_project_type: Project Type
-    placeholder_about_the_project: About the Project
-    send_message: Send Message
-
-    projectType:
-      - value: gd
-        title: Graphics Design
-
-      - value: wd
-        title: Web Design
+  main_behold_id: 6CW7rm0ZnxxUnu9i7sxM
+  insta_placeholder: More on Instagram
 
   # Navbar Action Button
   navAction:
@@ -154,13 +144,6 @@ params:
         - name: Cardskipper
           url: *register
 
-    # Footer Service
-    service:
-      title: "We help brands:"
-      description: >-
-        develop design solutions<br>produce valuable cultural content<br>create
-        fresh brand experience
-
     copyright:
       text: UPF Linköping
       rights: Copyright ©
@@ -172,6 +155,7 @@ taxonomies:
   category: categories
   tag: tags
   board: board
+  year: year
 
 module:
   mounts:
@@ -183,3 +167,6 @@ module:
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
     - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
     #- path: github.com/theNewDynamic/huge
+
+_build:
+  publishResources: false

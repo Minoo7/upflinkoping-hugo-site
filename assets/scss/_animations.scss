@@ -1,0 +1,46 @@
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+
+.zoomOut {
+  /* Add a transition for smooth animation */
+  transition: all 0.3s ease;
+  /* Apply the animation to the element */
+  animation-name: zoomOut;
+  /* Set the duration of the animation */
+  animation-duration: 0.5s;
+  /* Set the timing function for the animation */
+  animation-timing-function: linear;
+  /* Keep the final state of the animation */
+  animation-fill-mode: forwards;
+  /* Set the initial opacity to 1 */
+  opacity: 1;
+}

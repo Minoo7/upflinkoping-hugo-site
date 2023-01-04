@@ -1,10 +1,1 @@
-<div class="mb-3">
-  <a href="https://www.facebook.com/events/{{ .Get 0 }}" class="btn btn-white btn-lg btn-icon p-0">
-    <span style="color: #2374e1;">
-      {{ partial "svg" "fab fa-facebook" }}
-    </span>
-    <span class="btn-area ms-2">
-      <span data-text="facebook.com">Facebook event</span>
-    </span>
-  </a>
-</div>
+{{ partial "facebook_event.html" (.Get 0) }}

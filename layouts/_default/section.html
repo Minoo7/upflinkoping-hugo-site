@@ -14,28 +14,65 @@
 
   <section class="site-blog">
     <div class="container">
-      <div class="row lnda">
+      <div class="row">
         {{- $currentPage := . -}}
-        {{ range (.Paginator 4).Pages }}
+        {{ $paginator := (.Paginator 4) }}
+        {{- range $paginator.Pages -}}
           <article class="col-lg-6 col-md-10 mx-auto">
-            <div class="card-container details {{ if $currentPage.Params.large_fix }} large_fix {{ end }}">
+            <div class="card-container details">
               <div class="card">
                 <div class="card-img-top">
                   {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions "960x960" ) -}}
-                  {{- $image_res := (resources.GetMatch .Params.Image) -}}
-                  {{- $image := (cond (isset .Params "fit") ($image_res.Fit $dimens) ($image_res.Fill $dimens) ) -}}
+                  {{- $command := (cond (isset .Params "fit") "Fit" "Fill") -}}
+                  {{- $image := (partial "methods/hugo-imgproc.html" (dict "img" (resources.GetMatch .Params.Image) "command" $command "options" $dimens)) -}}
                   <img src="{{ $image.Permalink }}" width="100%" alt="" />
                 </div>
                 <div class="card-body">
                   <span class="card-text">{{ .PublishDate.Format "January 2, 2006" }}</span>
-                  <h3 class="card-title"><a href="{{ .Permalink }}" class="card-link">{{ upper .Title }}</a></h3>
+                  <h3 class="card-title"><a href="{{ .Permalink }}" class="card-link">{{ upper .Title | safeHTML }}</a></h3>
                   <small class="card-text">{{ .Summary | truncate 120 }}</small>
                   <a href="{{ .Permalink }}" class="card-link read-more text-primary">read more</a>
                 </div>
               </div>
             </div>
           </article>
+        {{- end -}}
+
+        {{/* Last page: */}}
+        {{ if eq $paginator.PageNumber  $paginator.TotalPages }}
+          <article class="col-lg-6 col-md-10 mx-auto">
+            <div class="card-container insta-placeholder">
+              <div class="card">
+                <div class="card-img-top">
+                  {{/* {{ partial "instagram-behold" .Site.Params.main_behold_id }} */}}
+                  <!-- LightWidget WIDGET -->
+                  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+                  <iframe src="//lightwidget.com/widgets/b656bb389a0257d7a8b4acf4532c0b42.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+                </div>
+                <div class="insta-placeholder-text card-img-overlay center-btn justify-content-center pe-none">
+                  <h1 class="plus">+</h1>
+                  <h2 class="text-white insta-placeholder text-center">{{ .Site.Params.insta_placeholder | safeHTML }}</h2>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <script>
+            $(document).ready(function () {
+              // Set an interval to check the element's opacity every 500 milliseconds
+              var interval = setInterval(function () {
+                // If the element's opacity is starting to grow (> 0) -> show text
+                if ($(".behold-grid-image").css("opacity") > 0) {
+                  //$(".insta-placeholder h2").show();
+                  $(".insta-placeholder-text").css("opacity", 1);
+                  clearInterval(interval);
+                }
+              }, 300);
+            });
+          </script>
         {{ end }}
+
+
         <div class="col-12">
           <div class="site-blog-pagination">
             {{ template "_internal/pagination.html" . }}

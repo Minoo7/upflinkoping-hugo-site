@@ -1,0 +1,15 @@
+{{ $img := .img }}
+{{ $command := .command }}
+{{ $options := .options }}
+{{ if eq $command "Fit" }}
+  {{ $img = $img.Fit $options }}
+{{ else if eq $command "Resize" }}
+  {{ $img = $img.Resize $options }}
+{{ else if eq $command "Fill" }}
+  {{ $img = $img.Fill $options }}
+{{ else if eq $command "Crop" }}
+  {{ $img = $img.Crop $options }}
+{{ else }}
+  {{ errorf "Invalid image processing command: Must be one of Crop, Fit, Fill or Resize." }}
+{{ end }}
+{{ return $img }}
