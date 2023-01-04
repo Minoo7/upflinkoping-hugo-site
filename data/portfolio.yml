@@ -1,21 +1,3 @@
 enable: true
 title: "WHAT WE DO"
 subtitle: "Explore the world; learn about the complexities of local and global politics – and discuss them in equity and fraternity."
-
-items:
-  - title: Lectures
-    url: /lectures
-    image: "images/portfolio/lectures/lectures.svg"
-    category: [movies]
-  - title: Activities
-    url: /activities
-    image: "images/portfolio/activities/activities_baseline.svg"
-    category: [movies]
-  - title: Trips
-    url: /trips
-    image: "images/portfolio/trips/trips.svg" 
-    category: [movies]
-  - title: Projects
-    url: /projects
-    image: "images/portfolio/projects/projects.svg"
-    category: [movies]

@@ -2,7 +2,6 @@
 title: "Monday Pub Quiz night pt.2"
 date: 2022-11-21
 category: ["2022"]
-image: "images/portfolio/activities/cok_najs/cover.png"
 gallery: "images/portfolio/activities/cok_najs/gallery/*"
 facebook_id: 1136838256947069
 ---

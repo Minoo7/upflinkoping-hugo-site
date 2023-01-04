@@ -7,7 +7,8 @@ register: &register "https://apply.cardskipper.se/hr3"
 linktree: &linktree "https://linktr.ee/upflinkoping"
 
 permalinks:
-  lectures: /:section/:year/:month/:title/:slug/
+  portfolio: /:sections[1:]/:slug/
+  
 
 # Site Menus
 menu:
@@ -75,6 +76,9 @@ params:
 
   main_behold_id: 6CW7rm0ZnxxUnu9i7sxM
   insta_placeholder: More on Instagram
+
+  ignore:
+    - portfolio
 
   # Navbar Action Button
   navAction:
@@ -155,7 +159,6 @@ taxonomies:
   category: categories
   tag: tags
   board: board
-  year: year
 
 module:
   mounts:

@@ -3,8 +3,8 @@ title: "Fair and sustainable transportation"
 date: 2022-11-18
 author: Jindan Gong
 category: ["Jindan Gong, 2022"]
-fit: true
-image: "images/portfolio/lectures/stefan-jonsson/cover.jpg"
+# fit: true
+image: "images/portfolio/lectures/jindan-gong/cover.png"
 gallery: "images/portfolio/lectures/jindan_gong/gallery/*"
 
 ---

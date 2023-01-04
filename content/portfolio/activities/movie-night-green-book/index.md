@@ -2,7 +2,8 @@
 title: "Christmas movie night - green book"
 date: 2022-12-05
 category: ["2022, Movie"]
-image: "images/portfolio/activities/movie-night-green-book/cover.jpg"
+# image: "images/portfolio/activities/movie-night-green-book/cover.jpg"
+img: "cover.jpg"
 facebook_id: 656714919463802
 ---
 Oh, the weather outside is frightful!

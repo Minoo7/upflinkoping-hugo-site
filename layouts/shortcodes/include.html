@@ -1,0 +1,5 @@
+{{ $file := .Get 0 }}
+{{ $file }}
+heeeej
+{{/*  {{ printf "%s%s" .Page.CurrentSection.File.Dir $file}}  */}}
+{{ (printf "%s" $file) | readFile | replaceRE "^---[\\s\\S]+?---" "" | safeHTML }}
