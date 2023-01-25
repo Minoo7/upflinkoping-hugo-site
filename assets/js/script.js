@@ -21,7 +21,7 @@ $(document).ready(function () {
   });
 
   activeOpacityListener(".site-board-member");
-  activeOpacityListener(".site-testimonial-item");
+  // activeOpacityListener(".site-testimonial-item");
 
   $(".gallery-link").on("click", function () {
     $(this).find(".gallery").magnificPopup("open");

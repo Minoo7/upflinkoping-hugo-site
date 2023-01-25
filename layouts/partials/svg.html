@@ -1,0 +1,7 @@
+{{/*  CODE IMPORTED BUT REMOVED PARTIALCACHED - https://github.com/UtkarshVerma/hugo-modules */}}
+{{ $args := dict "icon" . }}
+{{ if reflect.IsMap . }}
+    {{ $args = . }}
+{{ end }}
+
+{{ return partial "_svg" $args $args }}

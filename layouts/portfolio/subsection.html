@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <h1>{{ .Title }}</h1>
-          <p>
+          <p class="mt-4">
             {{ .Content }}
           </p>
         </div>
@@ -22,9 +22,12 @@
             <div class="card-container details">
               <div class="card">
                 <div class="card-img-top">
-                  {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions "960x960" ) -}}
+                  {{- $image := (.Resources.GetMatch "images/cover.*") -}}
+                  {{/*  {{ $cover_dimens := $currentPage.Site.Params.cover_dimens}}  */}}
+                  {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions
+                  (cond (eq .Params.own_size true) (partial "methods/get-dimens" (dict "width" $image.Width "height" $image.Height)) "960x960")) -}}
                   {{- $command := (cond (isset .Params "fit") "Fit" "Fill") -}}
-                  {{- $image := (partial "methods/hugo-imgproc.html" (dict "img" (.Resources.GetMatch "images/cover.*") "command" $command "options" $dimens)) -}}
+                  {{- $image = (partial "methods/hugo-imgproc.html" (dict "img" $image "command" $command "options" $dimens)) -}}
                   <img src="{{ $image.Permalink }}" width="100%" alt="" />
                 </div>
                 <div class="card-body">
@@ -46,8 +49,7 @@
                 <div class="card-img-top">
                   {{/* {{ partial "instagram-behold" .Site.Params.main_behold_id }} */}}
                   <!-- LightWidget WIDGET -->
-                  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-                  <iframe src="//lightwidget.com/widgets/b656bb389a0257d7a8b4acf4532c0b42.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+                  {{- partial "widgets/lightwidget" .Site.Params.single_lightwidget_id -}}
                 </div>
                 <div class="insta-placeholder-text card-img-overlay center-btn justify-content-center pe-none">
                   <h1 class="plus">+</h1>

@@ -32,7 +32,7 @@ menu:
 
     - name: Cardskipper
       url: *register
-      pre: images/fontawesome/cardskipper
+      pre: "images/icons/cardskipper"
       weight: 4
 
   main:
@@ -75,10 +75,16 @@ params:
   fabform: "https://fabform.io/f/USAg2Jl"
 
   main_behold_id: 6CW7rm0ZnxxUnu9i7sxM
+
   insta_placeholder: More on Instagram
+  single_lightwidget_id: b656bb389a0257d7a8b4acf4532c0b42
 
   ignore:
     - portfolio
+  
+  cover_dimens:
+    width: 960
+    height: 960
 
   # Navbar Action Button
   navAction:

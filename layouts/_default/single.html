@@ -14,7 +14,7 @@
             <h2 class="post-title">{{ title .Title | safeHTML }}</h2>
             {{/* <img class="feature-image" src="{{ .Params.image | absURL }}" alt="blog-feature-image"> */}}
             {{ $showInstagram := true }}
-            {{ with .Params.gallery }}
+            {{ with (.Resources.Match "images/gallery/*") }}
               {{ partial "carousel.html" (dict "images" . "duration" "7000") }}
               {{ $showInstagram = false }}
             {{ end }}

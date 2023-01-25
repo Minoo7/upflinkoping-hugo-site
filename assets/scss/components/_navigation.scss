@@ -19,9 +19,13 @@
   }
   .navbar-brand {
     svg {
+      transition: all 0.3s $site-ease;
       // color: $black;
       width: 36.25px; // height 40 px
       max-width: 78px;
+      &:hover {
+        color: $primary;
+      }
     }
   }
   .navbar-social {
@@ -39,9 +43,8 @@
         position: relative;
         transition: all 0.3s $site-ease;
         height: 30px;
-        fill: $secondary;
         &:hover {
-          fill: $upf-yellow;
+          // color: $primary;
         }
       }
     }

@@ -1,71 +1,57 @@
 {{ $context := . }}
 {{ with .Site.Data.portfolio }}
-{{ if .enable }}
-  <section class="site-portfolio text-bg-white" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h2>{{ .title }}</h2>
-            <p>{{ .subtitle }}</p>
+  {{ if .enable }}
+    <section class="site-portfolio text-bg-white" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>{{ .title }}</h2>
+              <p>{{ .subtitle }}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        {{ range where $context.Site.Pages "Section" "portfolio" }}
-          {{ $items := .Sections }}
-        {{- $len := (len $items) -}}
-        {{ $classScratch := newScratch }}
-        {{ range $index, $element := $items }}
-          {{ $classScratch.Set "classes" (slice "bg-primary") }}
-          {{ if eq (mod $index 2) 0 }}
-            {{ $classScratch.Set "classes" (slice "text-bg-secondary") }}
-          {{ end }}
-          {{ if gt $index 1 }}
-            {{ $mod4 := mod ($index) 4 }}
-            {{ if or (eq $mod4 1) (eq $mod4 2) }}
-              {{ $classScratch.Add "classes" "bg-lg-primary" }}
-            {{ else }}
-              {{ $classScratch.Add "classes" "bg-lg-secondary" }}
+        <div class="row">
+          {{ range where $context.Site.Pages "Section" "portfolio" }}
+            {{ $items := .Sections }}
+            {{- $len := (len $items) -}}
+            {{ $classScratch := newScratch }}
+            {{ range $index, $element := $items }}
+              {{ $classScratch.Set "classes" (slice "bg-primary") }}
+              {{ if eq (mod $index 2) 0 }}
+                {{ $classScratch.Set "classes" (slice "text-bg-secondary") }}
+              {{ end }}
+              {{ if gt $index 1 }}
+                {{ $mod4 := mod ($index) 4 }}
+                {{ if or (eq $mod4 1) (eq $mod4 2) }}
+                  {{ $classScratch.Add "classes" "bg-lg-primary" }}
+                {{ else }}
+                  {{ $classScratch.Add "classes" "bg-lg-secondary" }}
+                {{ end }}
+              {{ end }}
+              <article class="col-lg-6 col-md-10 mx-auto">
+                <div class="card-container">
+                  <div class="card {{ delimit ($classScratch.Get "classes") " " }}">
+                    <div class="card-img-top--svg">
+                      <a href="{{ .Permalink }}">
+                        {{- partial "svg" (.Resources.GetMatch .Params.Image) -}}
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      {{/*  <!--<span>{{ delimit .category ", " }}</span>-->  */}}
+                      <h3 class="card-title"><a href="{{ . }}" class="card-link">{{ upper .Title }}</a></h3>
+                      <a href="{{ .Permalink }}" class="card-link read-more">view examples</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
             {{ end }}
           {{ end }}
-          <article class="col-lg-6 col-md-10 mx-auto">
-            <div class="card-container">
-              <div class="card {{ delimit ($classScratch.Get "classes") " " }}">
-                <div class="card-img-top--svg">
-                  <a href="{{ .Permalink }}">
-                    {{/*  {{ (.Resources.GetMatch .Params.image).Permalink }}  */}}
-                    {{ with (.Resources.GetMatch .Params.image) }}
-                    {{- partial "svg" .Permalink -}}
-                    {{/*  {{ .RelPermalink }}  */}}
-                    {{ end }}
-                    {{ with .Resources.ByType "image" }}
-	                    <div class="Image">
-	                      {{ range . }}
-		                      {{/*  <img src="{{ .RelPermalink }}">  */}}
-                          {{ .RelPermalink }}
-	                      {{ end }}
-	                    </div>
-                    {{ end }}
-
-                    {{/*  {{- partial "svg" (.Resources.GetMatch .Params.image) -}}  */}}
-                  </a>
-                </div>
-                <div class="card-body">
-                  {{/*  <!--<span>{{ delimit .category ", " }}</span>-->  */}}
-                  <h3 class="card-title"><a href="{{ . }}" class="card-link">{{ upper .Title }}</a></h3>
-                  <a href="{{ .Permalink }}" class="card-link read-more">view examples</a>
-                </div>
-              </div>
-            </div>
-          </article>
-          {{ end }}
-        {{ end }}
-        {{/* <div class="col-12 text-center text-lg-left"> */}}
-        {{/* <a href="portfolio" class="site-portfolio-cta">MORE WORKS</a> */}}
-        {{/* </div> */}}
+          {{/* <div class="col-12 text-center text-lg-left"> */}}
+          {{/* <a href="portfolio" class="site-portfolio-cta">MORE WORKS</a> */}}
+          {{/* </div> */}}
+        </div>
       </div>
-    </div>
-  </section>
-{{ end }}
+    </section>
+  {{ end }}
 {{ end }}

@@ -2,9 +2,6 @@
 title: "Werewolf Game Night"
 date: 2022-10-27
 category: ["2022"]
-image: "images/portfolio/activities/werewolf_game_night/cover2.jpg"
-gallery: "images/portfolio/activities/werewolf_game_night/gallery/*"
-
 facebook_id: 969626034440251
 ---
 It’s 1598, and Duke Charles has just led Linköping to victory in the battle of Stångebro, effectively ending the reign of king Sigismund of Poland. The villagers are relieved that the war has finally finished and want to resume their peaceful lives; however, they are not so fortunate as a band of ravenous werewolves has settled in the city. 🐺🌙
