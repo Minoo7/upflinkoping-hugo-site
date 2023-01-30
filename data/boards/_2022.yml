@@ -2,7 +2,8 @@ enable: true
 year: 2022
 images_path: images/board/
 members:
-  - image: vivian_vu.jpg
+  # - image: vivian_vu.jpg
+  - image: nugzari_batsikadze.png
     name: Vivian Vu
     designation: President
     linkedin: https://www.linkedin.com/in/vivian-vu-397376161/

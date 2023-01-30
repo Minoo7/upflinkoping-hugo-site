@@ -1,22 +1,38 @@
-<section class="text-bg-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        {{/* <div class="card border-0"> */}}
-        {{/* {{ $image := (resources.Get "images/portfolio/lectures/lectures.svg") }} */}} {{/* <img src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo" /> */}}
-        {{/* <div class="card-img-overlay center-btn"></div> */}}
-        {{/* </div> */}}
-        <div class="mx-auto bg-primary">
-          <img src="{{ (resources.Get "images/portfolio/lectures/lectures.svg") }}" class="card-img-top" alt="..." />
-          {{/* <div class="bg-primary">d</div> */}}
-          <div class="card">
-            <div class="card-body hover-item text-bg-gray">
-              <h3>Lectures</h3>
-              <a href="" class="read-more">view examples</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+<link rel="stylesheet" href="./jquery-pintura/pintura.css" />
+<script src="jquery.js"></script>
+<script src="jquery-pintura/pintura.js"></script>
+
+<style>
+    .pintura-editor {
+        height: 600px;
+    }
+</style>
+
+<div id="editor"></div>
+
+<script>
+    $(function () {
+        var editor = $('#editor').pinturaDefault({ src: '/images/board/vincent_garbrant.jpg' });
+
+        editor.on('pintura:load', function (event) {
+            const imageState = event.detail;
+
+            {
+                // Create a normal image and send it to smartcrop.js
+                const image = new Image();
+                image.src = URL.createObjectURL(dest);
+                image.onload = async () => {
+                    // Calculate the smart crop rectangle, set aspect ratio to 3:4
+                    const { topCrop } = await smartcrop.crop(image, {
+                        width: 3,
+                        height: 4,
+                    });
+
+                    // Update the editor crop
+                    $(editor).pintura('imageCrop', topCrop);
+                };
+            }
+        });
+    });
+</script>
