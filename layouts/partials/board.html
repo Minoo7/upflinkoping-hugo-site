@@ -32,35 +32,14 @@
       </div>
       <div class="row">
         {{ $images_path := .images_path }}
-        {{/*  {{ $img := resources.Get (.image | printf "%s%s" $images_path) }}  */}}
-        {{ range first 1 .members }}
+        {{ range .members }}
           <div class="col-lg-4 col-md-6">
             <div class="site-board-member">
               <div class="site-board-member-image">
-                {{/*  {{ partial "test.html" . }}  */}}
-                {{ $image := resources.Get (.image | printf "%s%s" $images_path) }}
-                {{ with $image }}
-                  {{ $img := .Crop "400x400 picture" }}
-                  <img src="{{ $img.Permalink | absURL }}" width="100px" height="100px" alt="team-member" />
+                {{ with .image }}
+                  {{ $image := resources.Get (.src | printf "%s%s" $images_path) }}
+                  <img src="{{ $image.Permalink | absURL }}" style="scale: {{ .scale }}; object-position: {{ .position }};" width="100px" height="100px" alt="team-member" />
                 {{ end }}
-
-                {{/*  {{ $image := resources.Get (.image | printf "%s%s" $images_path) }}  */}}
-                
-                {{/*  {{ $image := resources.Get "images/board/vivian_vu.jpg" }}  */}}
-                {{/*  {{ $img := resources.Get (string (.image | printf "%s%s" $images_path)) }}  */}}
-                {{/*  {{ $img := resources.Get .image}}  */}}
-                {{/*  {{ .image }}  */}}
-                {{/*  {{ $image := resources.Get (.image | printf "%s%s" $images_path) }}  */}}
-                {{/*  {{ $im := (.image | printf "%s%s" $images_path) }}  */}}
-                {{/*  {{ $image.Permalink }}  */}}
-                {{/*  {{ $img }}  */}}
-                {{/*  {{ .image }}  */}}
-                
-                {{/*  <img src="{{ ($context.resources.GetMatch $image).Permalink }}" alt="" width="100px" height="100px">  */}}
-                {{/*  <img src="{{ $imd.Permalink | absURL }}" alt="" width="100px" height="100px">  */}}
-                {{/*  {{ $image := (resources.Get .board).Resize "1920x" }}  */}}
-                {{/*  <img src="{{  | absURL }}" width="100px" height="100px" alt="team-member" />  */}}
-                
               </div>
               <h5></h5>
               <div class="site-board-member-content">

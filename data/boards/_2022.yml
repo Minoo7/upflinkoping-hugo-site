@@ -2,58 +2,90 @@ enable: true
 year: 2022
 images_path: images/board/
 members:
-  # - image: vivian_vu.jpg
-  - image: nugzari_batsikadze.png
-    name: Vivian Vu
+  - name: Vivian Vu
+    image:
+      src: vivian_vu.jpg
+      scale: 2
+      position: 13px 15px
     designation: President
     linkedin: https://www.linkedin.com/in/vivian-vu-397376161/
 
-  - image: suryansh_dhariwal.jpg
-    name: Suryansh Dhariwal
+  - name: Suryansh Dhariwal
+    image:
+      src: suryansh_dhariwal.jpg
+      scale: 2
+      position: 2px 18px
     designation: Vice President
     linkedin: https://www.linkedin.com/in/suryansh-dhariwal-436901211/
-
-  - image: anna-maria_polasek.jpg
-    name: Anna-Maria Polasek
+  
+  - name: Anna-Maria Polasek
+    image:
+      src: anna-maria_polasek.jpg
+      scale: 1.4
+      position: 10px 14px
     designation: Secretary
     linkedin: https://www.linkedin.com/in/anna-maria-polasek-3980ab18a/
 
-  - image: gabriel_cedergren.jpg
-    name: Gabriel Cedergren
+  - name: Gabriel Cedergren
+    image:
+      src: gabriel_cedergren.jpg
+      scale: 2
+      position: 2px 15px
     designation: Treasurer
     linkedin: https://www.linkedin.com/in/gabrielcedergren/
-
-  - image: elyssa_tan.jpg
-    name: Elyssa Tan
+  
+  - name: Elyssa Tan
+    image: 
+      src: elyssa_tan.jpg
+      scale: 2.2
+      position: -2px 15px
     designation: Head of Program
     linkedin: https://www.linkedin.com/in/elyssajtan/
 
-  - image: janine_wallrabe.jpg
-    name: Janine Wallrabe
+  - name: Janine Wallrabe
+    image: 
+      src: janine_wallrabe.jpg
+      scale: 2
+      position: -9px 15px
     designation: Head of Program
     linkedin: https://www.linkedin.com/in/janine-wallrabe-099b881b0/
 
-  - image: mariska_helwig.jpg
-    name: Mariska Helwig
+  - name: Mariska Helwig
+    image:
+      src: mariska_helwig.jpg
+      scale: 2.4
+      position: 0 9px
     designation: Head of Activity
     linkedin: https://www.linkedin.com/in/mariska-helwig-6b7b4118a/
 
-  - image: niccolo_jurkoweit.jpg
-    name: Niccolo Jurkoweit
+  - name: Niccolo Jurkoweit
+    image: 
+      src: niccolo_jurkoweit.jpg
+      scale: 2
+      position: 0 15px
     designation: Head of Travel
     linkedin: https://www.linkedin.com/in/niccolo-jurkoweit-3227aa1b4/
 
-  - image: karolina_skalova.jpg
-    name: Karolína Skálová
+  - name: Karolína Skálová
+    image:
+      src: karolina_skalova.jpg
+      scale: 2.4
+      position: 8px 11px
     designation: Head of PR & Marketing
     linkedin: https://www.linkedin.com/in/karolinaskalova/
 
-  - image: vincent_garbrant.jpg
-    name: Vincent Garbrant
+  - name: Vincent Garbrant
+    image:
+      src: vincent_garbrant.jpg
+      scale: 2.1
+      position: -5px 17px
     designation: Webmaster
     linkedin: https://www.linkedin.com/in/vincent-garbrant-a1a793211/
 
-  - image: nugzari_batsikadze.jpg
-    name: Nugzari Batsikadze
+  - name: Nugzari Batsikadze
+    image:
+      src: nugzari_batsikadze.jpg
+      scale: 2.1
+      position: 5px 15px
     designation: UFS Representative
     linkedin: https://www.linkedin.com/in/nugzari-batsikadze-320493202/
