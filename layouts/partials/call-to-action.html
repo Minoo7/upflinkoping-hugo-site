@@ -1,16 +1,45 @@
-{{ with .Site.Params.call_to_action }}
+{{ $context := . }}
+{{ $showPerks := false }}
+
+{{ if reflect.IsMap . }}
+  {{ $context = .context }}
+  {{ with .showPerks }}
+    {{ $showPerks = . }}
+  {{ end }}
+{{ end }}
+
+{{ with $context.Site.Data.call_to_action }}
   {{ if .enable }}
-    <section class="site-cta text-bg-light bg-white">
+    {{ $primary_button := .primary_button }}
+    {{ $primary_button_url := .primary_button_url }}
+
+    <section class="site-cta text-bg-light bg-white" id="cta">
       <div class="container">
         <div class="row">
-          <div class="col-12 text-center">
-            <h1 class="site-cta-title">{{ upper .title }}</h1>
-            <ul class="site-cta-buttons">
+          <div class="col-12">
+            <h1 class="site-cta-title text-center">{{ upper (.title) }}</h1>
+
+            {{ if $showPerks }}
+              {{ with .perks }}
+                {{ $primary_button = .primary_button }}
+                {{ $primary_button_url = .primary_button_url }}
+
+                <div class="d-flex justify-content-center">
+                  <ul class="fs-5">
+                    {{ range .list }}
+                      <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                </div>
+                <h5 class="text-center my-5">{{ .bottom_text }}</h5>
+              {{ end }}
+            {{ end }}
+            <ul class="site-cta-buttons text-center">
               <li>
-                <a href="{{ .primary_button_url | absURL }}" class="btn btn-lg btn-primary">
+                <a href="{{ $primary_button_url | absURL }}" class="btn btn-lg btn-primary">
                   <span class="btn-area">
-                    <span data-text="{{ .primary_button }}">
-                      {{ .primary_button }}
+                    <span data-text="{{ $primary_button }}">
+                      {{ $primary_button }}
                     </span>
                   </span>
                 </a>

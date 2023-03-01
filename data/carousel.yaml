@@ -1,9 +1,0 @@
-images: 
-  - image: /images/gallery/gallery01.jpg
-    content_html: "1"
-  - image: /images/gallery/gallery02.jpg
-    content_html: "2"
-  - image: /images/gallery/gallery03.jpg
-    content_html: "3"
-  - image: /images/gallery/gallery04.jpg
-    content_html: "4"

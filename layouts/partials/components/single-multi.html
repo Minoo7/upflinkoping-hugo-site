@@ -1,0 +1,20 @@
+{{- $data := .data -}}
+<style>
+  br {
+    display: block;
+    margin: 4px;
+  }
+</style>
+{{- with .context -}}
+  {{- with (index .Site.Data.content $data) -}}
+    <div class="row">
+    {{- range .items -}}
+      <div class="col-md-12 col-lg-6">
+        <p class="mt-4">{{ .date }}</p>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text | safeHTML }}</p>
+      </div>
+    {{- end -}}
+    </div>
+  {{- end -}}
+{{- end -}}

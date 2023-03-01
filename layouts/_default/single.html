@@ -7,23 +7,28 @@
             <span class="fs-5">
               {{- partial "breadcrumb.html" . -}}
             </span>
-            <p class="mt-4">
-              {{ .PublishDate.Format "January 2, 2006" }}
-              {{ with .Params.author }}<span>by {{ . }}</span>{{ end }}
-            </p>
-            <h2 class="post-title">{{ title .Title | safeHTML }}</h2>
-            {{/* <img class="feature-image" src="{{ .Params.image | absURL }}" alt="blog-feature-image"> */}}
             {{ $showInstagram := true }}
-            {{ with (.Resources.Match "images/gallery/*") }}
-              {{ partial "carousel.html" (dict "images" . "duration" "7000") }}
-              {{ $showInstagram = false }}
-            {{ end }}
+            {{ if .Params.Multi }}
+              {{ partial "components/single-multi.html" (dict "context" . "data" .Params.Data ) }}        
+            {{ else }}
+              <p class="mt-4">
+                {{ .PublishDate.Format "January 2, 2006" }}
+                {{ with .Params.author }}<span>by {{ . }}</span>{{ end }}
+              </p>
+            
+              <h2 class="post-title">{{ title .Title | safeHTML }}</h2>
+              {{/* <img class="feature-image" src="{{ .Params.image | absURL }}" alt="blog-feature-image"> */}}
+              {{ with (.Resources.Match "images/gallery/*") }}
+                {{ partial "carousel.html" (dict "images" . "duration" "7000") }}
+                {{ $showInstagram = false }}
+              {{ end }}
 
-            {{ with .Params.facebook_id }}
-              {{ partial "facebook_event.html" . }}
-            {{ end }}
+              {{ with .Params.facebook_id }}
+                {{ partial "facebook_event.html" . }}
+              {{ end }}
 
-            {{ .Content }}
+              {{ .Content }}
+            {{ end }}
           </article>
         </div>
       </div>

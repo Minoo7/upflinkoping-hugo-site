@@ -1,0 +1,29 @@
+baseURL: https://upflinkoping.org/
+languageCode: en-us
+title: UPF Linköping | Student Association of Foreign Affairs
+summarylength: 25
+
+register: &register "https://apply.cardskipper.se/hr3"
+linktree: &linktree "https://linktr.ee/upflinkoping"
+
+permalinks:
+  portfolio: /:sections[1:]/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+  board: board
+
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: _huge
+      target: assets/_huge
+  imports:
+    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
+    #- path: github.com/theNewDynamic/huge
+
+_build:
+  publishResources: false

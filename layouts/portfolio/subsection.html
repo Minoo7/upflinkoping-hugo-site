@@ -19,7 +19,7 @@
         {{ $paginator := (.Paginator 4) }}
         {{- range $paginator.Pages -}}
           <article class="col-lg-6 col-md-10 mx-auto">
-            <div class="card-container details">
+            <div class="card-container details {{ if eq .Params.multi true }} multi {{ end }}">
               <div class="card">
                 <div class="card-img-top">
                   {{- $image := (.Resources.GetMatch "images/cover.*") -}}

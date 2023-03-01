@@ -6,6 +6,10 @@ article {
   }
   .card-container {
     margin-bottom: 30px;
+    &.multi {
+      box-shadow: 7.5px -7.5px 0px 0px lightgray, 12.5px -12.5px 0px 0px $text-color-sub;
+    }
+    
     transition: all 0.3s ease-in;
     &.details {
       .card-body {

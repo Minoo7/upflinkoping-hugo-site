@@ -26,9 +26,9 @@
   &:hover {
     .btn-area {
       span {
-        transform: translateY(-150%) skewY(7deg);
+        transform: translateY(-150%) skewY(6deg);
         &::after {
-          transform: skewY(-7deg);
+          transform: skewY(-6deg);
         }
       }
     }

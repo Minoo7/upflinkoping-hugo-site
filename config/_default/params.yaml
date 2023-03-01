@@ -1,0 +1,80 @@
+register: &register "https://apply.cardskipper.se/hr3"
+linktree: &linktree "https://linktr.ee/upflinkoping"
+
+# Site Params
+
+logo: "images/upf/upf-icon"
+logo_footer: "images/upf/upf-logo"
+dateFormat: 26 FEB 1994
+# Site Params
+# description: Roxo Hugo themes | Design Agency Template by StaticMania
+author: StaticMania
+# Google Analitycs
+googleAnalitycsID: Your ID
+# We're using formspree.io for form handling, paste your formspree url below
+fabform: "https://fabform.io/f/USAg2Jl"
+main_behold_id: 6CW7rm0ZnxxUnu9i7sxM
+insta_placeholder: More on Instagram
+single_lightwidget_id: b656bb389a0257d7a8b4acf4532c0b42
+ignore:
+  - portfolio
+
+cover_dimens:
+  width: 960
+  height: 960
+# Navbar Action Button
+navAction:
+  status: true
+  name: Learn More
+  url: *linktree
+# Banner Section
+banner:
+  enable: true
+  #background_image   : images/upf/background.png
+  title: UPF Linköping
+  heading: Student Association of Foreign Affairs
+  primary_button: See what we do
+  primary_button_url: portfolio
+  secondary_button: Become a member
+  secondary_button_url: *register
+error:
+  code: 404
+  text: PAGE NOT FOUND
+  button:
+    url: /
+    text: Go back home
+footer:
+  # Footer Contact Info
+  contactInfo:
+    title: Contact Info
+    address: "Kårallen, Linköping,<br>58183, SE"
+    email: info@upflinkoping.org
+  # Footer Sitemap
+  sitemap:
+    title: Sitemap
+    link:
+      - name: Projects
+        url: portfolio
+      - name: Board
+        url: board/2022
+      - name: Calendar
+        url: calendar
+
+  # Footer Social Media
+  social:
+    title: Social Media
+    link:
+      - name: Instagram
+        url: "https://www.instagram.com/upflinkoping/"
+      - name: Linkedin
+        url: "https://www.linkedin.com/company/upf-linkoping/"
+      - name: Facebook
+        url: "https://www.facebook.com/UPFlinkoping"
+      - name: Cardskipper
+        url: *register
+  copyright:
+    text: UPF Linköping
+    rights: Copyright ©
+    template:
+      text: "- based on a template by"
+      link: StaticMania

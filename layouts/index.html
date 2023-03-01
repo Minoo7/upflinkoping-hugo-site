@@ -3,9 +3,13 @@
   {{ partial "description.html" . }}
   {{ partial "portfolio.html" . }}
   {{ partial "board-overview.html" . }}
+
   {{/*  {{ partial "test.html" . }}  */}}
   {{/*  {{ partial "testimonial.html" . }}  */}}
-  {{ partial "call-to-action.html" . }}
+  
+  {{ partial "call-to-action.html" (dict "context" . "showPerks" true) }}
+
+
   {{/*  {{ partial "test.html" . }}  */}}
 
 
