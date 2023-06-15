@@ -13,9 +13,7 @@ author: StaticMania
 googleAnalitycsID: Your ID
 # We're using formspree.io for form handling, paste your formspree url below
 fabform: "https://fabform.io/f/USAg2Jl"
-main_behold_id: 6CW7rm0ZnxxUnu9i7sxM
 insta_placeholder: More on Instagram
-single_lightwidget_id: b656bb389a0257d7a8b4acf4532c0b42
 ignore:
   - portfolio
 

@@ -47,9 +47,8 @@
             <div class="card-container insta-placeholder">
               <div class="card">
                 <div class="card-img-top">
-                  {{/* {{ partial "instagram-behold" .Site.Params.main_behold_id }} */}}
                   <!-- LightWidget WIDGET -->
-                  {{- partial "widgets/lightwidget" .Site.Params.single_lightwidget_id -}}
+                  {{- partial "widgets/lightwidget" .Site.Data.instagram.single_lightwidget_id -}}
                 </div>
                 <div class="insta-placeholder-text card-img-overlay center-btn justify-content-center pe-none">
                   <h1 class="plus">+</h1>
