@@ -57,20 +57,6 @@
               </div>
             </div>
           </article>
-
-          <script>
-            $(document).ready(function () {
-              // Set an interval to check the element's opacity every 500 milliseconds
-              var interval = setInterval(function () {
-                // If the element's opacity is starting to grow (> 0) -> show text
-                if ($(".behold-grid-image").css("opacity") > 0) {
-                  //$(".insta-placeholder h2").show();
-                  $(".insta-placeholder-text").css("opacity", 1);
-                  clearInterval(interval);
-                }
-              }, 300);
-            });
-          </script>
         {{ end }}
 
 
