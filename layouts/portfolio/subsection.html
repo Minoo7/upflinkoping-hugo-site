@@ -19,16 +19,19 @@
         {{ $paginator := (.Paginator 4) }}
         {{- range $paginator.Pages -}}
           <article class="col-lg-6 col-md-10 mx-auto">
-            <div class="card-container details {{ if eq .Params.multi true }} multi {{ end }}">
+            <div class="card-container details {{ if eq .Params.multi true }}multi{{ end }}">
               <div class="card">
                 <div class="card-img-top">
-                  {{- $image := (.Resources.GetMatch "images/cover.*") -}}
-                  {{/*  {{ $cover_dimens := $currentPage.Site.Params.cover_dimens}}  */}}
-                  {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions
-                  (cond (eq .Params.own_size true) (partial "methods/get-dimens" (dict "width" $image.Width "height" $image.Height)) "960x960")) -}}
-                  {{- $command := (cond (isset .Params "fit") "Fit" "Fill") -}}
-                  {{- $image = (partial "methods/hugo-imgproc.html" (dict "img" $image "command" $command "options" $dimens)) -}}
-                  <img src="{{ $image.Permalink }}" width="100%" alt="" />
+                  <a href="{{ .Permalink }}">
+                    {{- $image := (.Resources.GetMatch "images/cover.*") -}}
+                    {{/* {{ $cover_dimens := $currentPage.Site.Params.cover_dimens }} */}}
+                    {{- $dimens := (cond (isset $currentPage.Params "dimensions") $currentPage.Params.dimensions
+                      (cond (eq .Params.own_size true) (partial "methods/get-dimens" (dict "width" $image.Width "height" $image.Height)) "960x960"))
+                    -}}
+                    {{- $command := (cond (isset .Params "fit") "Fit" "Fill") -}}
+                    {{- $image = (partial "methods/hugo-imgproc.html" (dict "img" $image "command" $command "options" $dimens)) -}}
+                    <img src="{{ $image.Permalink }}" width="100%" alt="" />
+                  </a>
                 </div>
                 <div class="card-body">
                   <span class="card-text">{{ .PublishDate.Format "January 2, 2006" }}</span>
