@@ -90,12 +90,10 @@ $(document).ready(function () {
 
 
 });
+
 var height = $(".card-body").outerHeight();
 $(".card-body").css("bottom", -height);
 $(".card-container").css("padding-bottom", height);
-
-
-
 
 
 function activeOpacityListener(item) {

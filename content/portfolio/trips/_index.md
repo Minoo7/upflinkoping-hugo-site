@@ -5,7 +5,7 @@ url: /trips
 type: talks
 image: "trips.svg" 
 layout: subsection
-weight: 3
+weight: 4
 
 dimensions: 960x640
 ---

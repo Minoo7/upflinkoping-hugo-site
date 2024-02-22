@@ -13,22 +13,22 @@
         </div>
         <div class="row">
           {{ range where $context.Site.Pages "Section" "portfolio" }}
-            {{ $items := .Sections }}
+            {{- $items := .Sections -}}
             {{- $len := (len $items) -}}
-            {{ $classScratch := newScratch }}
-            {{ range $index, $element := $items }}
-              {{ $classScratch.Set "classes" (slice "bg-primary") }}
-              {{ if eq (mod $index 2) 0 }}
-                {{ $classScratch.Set "classes" (slice "text-bg-secondary") }}
-              {{ end }}
-              {{ if gt $index 1 }}
-                {{ $mod4 := mod ($index) 4 }}
-                {{ if or (eq $mod4 1) (eq $mod4 2) }}
-                  {{ $classScratch.Add "classes" "bg-lg-primary" }}
-                {{ else }}
-                  {{ $classScratch.Add "classes" "bg-lg-secondary" }}
-                {{ end }}
-              {{ end }}
+            {{- $classScratch := newScratch -}}
+            {{- range $index, $element := $items -}}
+              {{- $classScratch.Set "classes" (slice "text-bg-secondary") -}}
+              {{- if eq (mod $index 2) 0 -}}
+                {{- $classScratch.Set "classes" (slice "bg-primary") -}}
+              {{- end -}}
+              {{- if gt $index 1 -}}
+                {{- $mod4 := mod ($index) 4 -}}
+                {{- if or (eq $mod4 1) (eq $mod4 2) -}}
+                  {{- $classScratch.Add "classes" "bg-lg-primary" -}}
+                {{- else -}}
+                  {{- $classScratch.Add "classes" "bg-lg-secondary" -}}
+                {{- end -}}
+              {{- end -}}
               <article class="col-lg-6 col-md-10 mx-auto">
                 <div class="card-container">
                   <div class="card {{ delimit ($classScratch.Get "classes") " " }}">
@@ -47,7 +47,7 @@
                   </div>
                 </div>
               </article>
-            {{ end }}
+            {{- end -}}
           {{ end }}
           {{/* <div class="col-12 text-center text-lg-left"> */}}
           {{/* <a href="portfolio" class="site-portfolio-cta">MORE WORKS</a> */}}

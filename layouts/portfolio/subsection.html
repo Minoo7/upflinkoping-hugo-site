@@ -11,9 +11,19 @@
 
       <div class="row">
         {{- $currentPage := . -}}
-        {{ $paginator := (.Paginator 4) }}
+        {{ $page_size := 4 }}
+
+        {{- $classScratch := newScratch -}}
+        {{- $classScratch.Set "column_size" "col-lg-6 col-md-10" -}}
+        {{- if eq .Params.size "small" -}}
+          {{ $page_size = 6 }}
+          {{- $classScratch.Set "column_size" "col-lg-4 col-md-6" -}}
+        {{- end -}}
+
+        {{ $paginator := (.Paginator $page_size) }}
+
         {{- range $paginator.Pages -}}
-          <article class="col-lg-6 col-md-10 mx-auto">
+          <article class="mx-auto {{ $classScratch.Get "column_size" }}">
             <div class="card-container details {{ if eq .Params.multi true }}multi{{ end }}">
               <div class="card">
                 <div class="card-img-top">

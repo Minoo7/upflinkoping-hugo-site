@@ -3,7 +3,14 @@
   <ul>
     {{ range $index, $slide := $images }}
       <li id="c10_slide{{ add $index 1 }}" class="cslide" data-items="none">
-        <img src="{{ $slide.Permalink | absURL }}" alt="" />
+        {{ $image_type_arr := split $slide "." }}
+        {{ $image_ext := index $image_type_arr 1 }}
+        {{ if eq $image_ext "mp4" }}
+          <video controls><source src="{{ $slide }}" type="video/mp4"></video> 
+        {{ else }}
+          <img src="{{ $slide.Permalink | absURL }}" alt="" />
+        {{ end }}
+        
       </li>
     {{ end }}
   </ul>
