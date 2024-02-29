@@ -1,10 +1,9 @@
 enable: true
 year: 2022
-images_path: images/board/2022/
 members:
   - name: Vivian Vu
     image:
-      src: vivian_vu.jpg
+      src: images/vivian_vu.jpg
       scale: 2
       position: 13px 15px
     designation: President
@@ -12,7 +11,7 @@ members:
 
   - name: Suryansh Dhariwal
     image:
-      src: suryansh_dhariwal.jpg
+      src: images/suryansh_dhariwal.jpg
       scale: 2
       position: 2px 18px
     designation: Vice President
@@ -20,7 +19,7 @@ members:
   
   - name: Anna-Maria Polasek
     image:
-      src: anna-maria_polasek.jpg
+      src: images/anna-maria_polasek.jpg
       scale: 1.4
       position: 10px 14px
     designation: Secretary
@@ -28,7 +27,7 @@ members:
 
   - name: Gabriel Cedergren
     image:
-      src: gabriel_cedergren.jpg
+      src: images/gabriel_cedergren.jpg
       scale: 2
       position: 2px 15px
     designation: Treasurer
@@ -36,7 +35,7 @@ members:
   
   - name: Elyssa Tan
     image: 
-      src: elyssa_tan.jpg
+      src: images/elyssa_tan.jpg
       scale: 2.2
       position: -2px 15px
     designation: Head of Program
@@ -44,7 +43,7 @@ members:
 
   - name: Janine Wallrabe
     image: 
-      src: janine_wallrabe.jpg
+      src: images/janine_wallrabe.jpg
       scale: 2
       position: -9px 15px
     designation: Head of Program
@@ -52,7 +51,7 @@ members:
 
   - name: Mariska Helwig
     image:
-      src: mariska_helwig.jpg
+      src: images/mariska_helwig.jpg
       scale: 2.4
       position: 0 9px
     designation: Head of Activity
@@ -60,7 +59,7 @@ members:
 
   - name: Niccolo Jurkoweit
     image: 
-      src: niccolo_jurkoweit.jpg
+      src: images/niccolo_jurkoweit.jpg
       scale: 2
       position: 0 15px
     designation: Head of Travel
@@ -68,7 +67,7 @@ members:
 
   - name: Karolína Skálová
     image:
-      src: karolina_skalova.jpg
+      src: images/karolina_skalova.jpg
       scale: 2.4
       position: 8px 11px
     designation: Head of PR & Marketing
@@ -76,7 +75,7 @@ members:
 
   - name: Vincent Garbrant
     image:
-      src: vincent_garbrant.jpg
+      src: images/vincent_garbrant.jpg
       scale: 2.1
       position: -5px 17px
     designation: Webmaster
@@ -84,7 +83,7 @@ members:
 
   - name: Nugzari Batsikadze
     image:
-      src: nugzari_batsikadze.jpg
+      src: images/nugzari_batsikadze.jpg
       scale: 2.1
       position: 5px 15px
     designation: UFS Representative

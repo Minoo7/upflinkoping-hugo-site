@@ -1,7 +1,0 @@
-{{ define "main" }}
-
-{{ $boards := dict "2023" .Site.Data.boards._2023 "2022" .Site.Data.boards._2022 "2019" .Site.Data.boards._2019 "2018" .Site.Data.boards._2018 "2017" .Site.Data.boards._2017 }}
-{{ $board := index $boards .Data.Term }}
-{{ partial "board.html" $board }}
-
-{{ end }}

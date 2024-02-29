@@ -1,91 +1,82 @@
 enable: true
 year: 2023
-images_path: images/board/2022
 members:
-  - name: Vivian Vu
+  - name: Nugzari Batsikadze
     image:
-      src: vivian_vu.jpg
-      scale: 2
-      position: 13px 15px
+      src: images/nugzari_batsikadze.jpg
+      scale: 2.7
+      position: 3px 23px
     designation: President
-    linkedin: https://www.linkedin.com/in/vivian-vu-397376161/
+    linkedin: https://www.linkedin.com/in/nugzari-batsikadze-320493202/
 
-  - name: Suryansh Dhariwal
+  - name: Kaan Meydan
     image:
-      src: suryansh_dhariwal.jpg
-      scale: 2
-      position: 2px 18px
+      src: images/kaan_meydan.jpg
+      scale: 2.4
+      position: 4px 18px
     designation: Vice President
-    linkedin: https://www.linkedin.com/in/suryansh-dhariwal-436901211/
-  
-  - name: Anna-Maria Polasek
+    linkedin: https://se.linkedin.com/in/kaan-meydan-8417741b0
+
+  - name: Emmi Remes
     image:
-      src: anna-maria_polasek.jpg
-      scale: 1.4
-      position: 10px 14px
+      src: images/emmi_remes.jpg
+      scale: 3.1
+      position: 2px 18px
     designation: Secretary
-    linkedin: https://www.linkedin.com/in/anna-maria-polasek-3980ab18a/
+    linkedin: https://www.linkedin.com/in/emmi-remes
 
   - name: Gabriel Cedergren
     image:
-      src: gabriel_cedergren.jpg
+      src: images/gabriel_cedergren.jpg
       scale: 2
       position: 2px 15px
     designation: Treasurer
     linkedin: https://www.linkedin.com/in/gabrielcedergren/
-  
-  - name: Elyssa Tan
-    image: 
-      src: elyssa_tan.jpg
-      scale: 2.2
-      position: -2px 15px
-    designation: Head of Program
-    linkedin: https://www.linkedin.com/in/elyssajtan/
 
-  - name: Janine Wallrabe
-    image: 
-      src: janine_wallrabe.jpg
-      scale: 2
-      position: -9px 15px
-    designation: Head of Program
-    linkedin: https://www.linkedin.com/in/janine-wallrabe-099b881b0/
-
-  - name: Mariska Helwig
+  - name: Vivian Vu
     image:
-      src: mariska_helwig.jpg
-      scale: 2.4
-      position: 0 9px
+      src: images/vivian_vu.jpg
+      scale: 2
+      position: 13px 15px
     designation: Head of Activity
-    linkedin: https://www.linkedin.com/in/mariska-helwig-6b7b4118a/
+    linkedin: https://www.linkedin.com/in/vivian-vu-397376161/
 
-  - name: Niccolo Jurkoweit
-    image: 
-      src: niccolo_jurkoweit.jpg
-      scale: 2
-      position: 0 15px
-    designation: Head of Travel
-    linkedin: https://www.linkedin.com/in/niccolo-jurkoweit-3227aa1b4/
-
-  - name: Karolína Skálová
+  - name: Axel Lindmark
     image:
-      src: karolina_skalova.jpg
-      scale: 2.4
-      position: 8px 11px
-    designation: Head of PR & Marketing
-    linkedin: https://www.linkedin.com/in/karolinaskalova/
+      src: images/axel_lindmark.jpg
+      scale: 2.7
+      position: 2px 14px
+    designation: Head of Program
+    linkedin: https://se.linkedin.com/in/axel-lindmark-7a605816a
+
+  - name: Christiaan de Vries
+    image:
+      src: images/christiaan_de_vries.jpg
+      scale: 3.3
+      position: 2px 26px
+    designation: Head of Travel
+    linkedin: https://linkedin.com/in/christiaan-de-vries-eu
+
+  - name: Grace Anderson
+    image:
+      src: images/grace_anderson.jpg
+      scale: 2.1
+      position: 5.5px 12px
+    designation:
+    linkedin: https://www.linkedin.com/in/grace-anderson-706597252
 
   - name: Vincent Garbrant
     image:
-      src: vincent_garbrant.jpg
-      scale: 2.1
-      position: -5px 17px
+      src: images/vincent_garbrant.jpg
+      scale: 2.7
+      position: 3px 17px
     designation: Webmaster
-    linkedin: https://www.linkedin.com/in/vincent-garbrant-a1a793211/
+    linkedin: https://www.linkedin.com/in/vincentgarbrant/
 
-  - name: Nugzari Batsikadze
+  - name: Johannes Brockmann
     image:
-      src: nugzari_batsikadze.jpg
-      scale: 2.1
-      position: 5px 15px
-    designation: UFS Representative
-    linkedin: https://www.linkedin.com/in/nugzari-batsikadze-320493202/
+      src: images/johannes_brockmann.jpg
+      scale: 2.7
+      position: 2.9px 19px
+    designation: Head of PR & Marketing
+    # linkedin: https://www.linkedin.com/in/karolinaskalova/

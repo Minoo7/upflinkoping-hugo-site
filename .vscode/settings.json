@@ -1,5 +1,6 @@
 {
-    "search.exclude": {
-        "*/other/bootstrap": true
-    }
+  "search.exclude": {
+    "*/other/bootstrap": true
+  },
+  "prettier.singleQuote": true
 }

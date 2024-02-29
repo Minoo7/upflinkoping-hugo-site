@@ -1,0 +1,4 @@
+{{ $boards := dict "2023" .context.Site.Data.boards._2023 "2022" .context.Site.Data.boards._2022 "2019" .context.Site.Data.boards._2019 "2018"
+.context.Site.Data.boards._2018 "2017" .context.Site.Data.boards._2017 }}
+{{ $board_data := index $boards .year }}
+{{ return $board_data }}
