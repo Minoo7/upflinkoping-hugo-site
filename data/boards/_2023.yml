@@ -62,7 +62,7 @@ members:
       src: images/grace_anderson.jpg
       scale: 2.1
       position: 5.5px 12px
-    designation:
+    designation: Head of PR & Marketing
     linkedin: https://www.linkedin.com/in/grace-anderson-706597252
 
   - name: Vincent Garbrant
@@ -70,7 +70,7 @@ members:
       src: images/vincent_garbrant.jpg
       scale: 2.7
       position: 3px 17px
-    designation: Webmaster
+    designation: Webmaster & Head of Debate
     linkedin: https://www.linkedin.com/in/vincentgarbrant/
 
   - name: Johannes Brockmann
@@ -78,5 +78,5 @@ members:
       src: images/johannes_brockmann.jpg
       scale: 2.7
       position: 2.9px 19px
-    designation: Head of PR & Marketing
+    designation: UFS Representative
     # linkedin: https://www.linkedin.com/in/karolinaskalova/
