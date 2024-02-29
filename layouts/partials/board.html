@@ -1,60 +1,62 @@
 {{ $context := . }}
 {{ if .enable }}
-  <section class="site-board text-bg-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section-title">
-            <h2>
-              Board of
-              {{ .year }}
-            </h2>
-          </div>
+<section class="site-board text-bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>
+            Board of
+            {{ .year }}
+          </h2>
         </div>
-      </div>
-
-      <div class="row justify-content-lg-start justify-content-md-center">
-        <div class="col-auto">
-          <select class="form-select form-select-lg mb-5 text-secondary" id="board-select" onchange="javascript:handleSelect(this)" aria-label="Default select example">
-            <option value="2022">2022</option>
-            {{/* <option value="2019">2019</option> */}}
-            {{/* <option value="2018">2018</option> */}}
-            {{/* <option value="2017">2017</option> */}}
-          </select>
-          <script>
-            document.getElementById("board-select").value = "{{ .year }}";
-            function handleSelect(elm)
-            {
-              window.location.href = "../" + elm.value;
-            }
-          </script>
-        </div>
-      </div>
-      <div class="row">
-        {{ $images_path := .images_path }}
-        {{ range .members }}
-          <div class="col-lg-4 col-md-6">
-            <div class="site-board-member">
-              <div class="site-board-member-image">
-                {{ with .image }}
-                  {{ $image := resources.Get (.src | printf "%s%s" $images_path) }}
-                  <img src="{{ $image.Permalink | absURL }}" style="scale: {{ .scale }}; object-position: {{ .position }};" width="100px" height="100px" alt="team-member" />
-                {{ end }}
-              </div>
-              <h5></h5>
-              <div class="site-board-member-content">
-                <h3>{{ title .name }}</h3>
-                <p>{{ title .designation }}</p>
-                <a href="{{ .linkedin | absURL }}">
-                  <span>
-                    {{ partial "svg" "fa fab-linkedin" }}
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        {{ end }}
       </div>
     </div>
-  </section>
+
+    <div class="row justify-content-lg-start justify-content-md-center">
+      <div class="col-auto">
+        <select class="form-select form-select-lg mb-5 text-secondary" id="board-select"
+          onchange="javascript:handleSelect(this)" aria-label="Default select example">
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2018">2018</option>
+          {{/* <option value="2017">2017</option> */}}
+        </select>
+        <script>
+          document.getElementById("board-select").value = "{{ .year }}";
+          function handleSelect(elm) {
+            window.location.href = "../" + elm.value;
+          }
+        </script>
+      </div>
+    </div>
+    <div class="row">
+      {{ $images_path := .images_path }}
+      {{ range .members }}
+      <div class="col-lg-4 col-md-6">
+        <div class="site-board-member">
+          <div class="site-board-member-image">
+            {{ with .image }}
+            {{/*  {{ with resources.Get (.src | printf "%s%s" $images_path) }}  */}}
+            {{ . }}
+            {{/*  <img src="{{ .Permalink | absURL }}" style="scale: {{ .scale }}; object-position: {{ .position }};" width="100px" height="100px" alt="team-member" />  */}}
+            {{/*  {{ end }}  */}}
+            {{ end }}
+          </div>
+          <h5></h5>
+          <div class="site-board-member-content">
+            <h3>{{ title .name }}</h3>
+            <p>{{ title .designation }}</p>
+            <a href="{{ .linkedin | absURL }}">
+              <span>
+                {{ partial "svg" "fa fab-linkedin" }}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}

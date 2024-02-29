@@ -21,7 +21,7 @@ main:
     url: ""
     weight: 1
   - name: Board
-    url: /board/2022
+    url: /board/2023
     weight: 3
   - name: Calendar
     url: /calendar
