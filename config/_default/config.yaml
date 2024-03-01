@@ -20,6 +20,8 @@ module:
       target: assets
     - source: _huge
       target: assets/_huge
+    - source: static/images
+      target: assets/images
   imports:
     - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
     - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
