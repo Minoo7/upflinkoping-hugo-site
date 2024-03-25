@@ -5,9 +5,12 @@
         <div class="section-title">
           <h2 class="text-white">{{ .title }}</h2>
         </div>
-        <div class="card">
+        <div class="card overflow-hidden">
           {{ $image := (resources.Get .board).Resize "1920x" }}
-          <img src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo" />
+          <img
+          src="{{ $image.RelPermalink | absURL }}" class="card-img" alt="group photo"
+          style="scale: {{ .scale }}; object-position: {{ .position }};"
+           />
           <div class="card-img-overlay center-btn">
             <a href="{{ .primary_button_url | absURL }}" class="btn btn-lg btn-primary mb-4 mb-lg-5">
               <span class="btn-area">

@@ -1,5 +1,7 @@
 enable  : true
 title   : "The Board"
-board : "/images/upf/boardphoto-2022.jpg"
+board : "/images/upf/boardphoto-2023.jpg"
+scale: 1.25
+position: 3px 23px
 subtitle: "MORE ABOUT US"
 primary_button_url: board/2023
